@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Global */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -5,48 +6,78 @@
 
 body {
   margin: 0;
-  color: rgba(243, 241, 241, 0.959);
+  color: rgb(19, 17, 17);
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
-  background-color: rgb(12, 12, 12);
-  font-weight: 500;
+  background-color: rgba(243, 241, 241, 0.959);
+  font-weight: 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 /* Navigation */
-nav .navigation-logo {
+nav {
+  padding-bottom: 40px;
+}
+nav .navigation__logo {
   text-align: left;
 }
 @media only screen and (max-width: 992px) {
-  nav .navigation-logo {
+  nav .navigation__logo {
     text-align: center;
   }
 }
-nav .navigation-list {
-  text-align: center;
+nav .navigation__list {
+  text-align: right;
+}
+@media only screen and (max-width: 992px) {
+  nav .navigation__list {
+    text-align: center;
+  }
 }
 nav a {
   text-decoration: none;
-  color: rgb(163, 139, 1);
-  font-size: 24px;
+  color: rgb(175, 3, 3);
+  font-size: 32px;
   font-family: cursive;
 }
-nav a span {
-  color: rgb(175, 3, 3);
-}
 nav a:hover {
-  color: rgb(175, 3, 3);
+  color: rgb(163, 139, 1);
 }
 nav i {
   font-size: 30px;
   margin: 0 10px;
-  color: rgb(175, 3, 3);
+  color: rgb(163, 139, 1);
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyIsIi4uL3Nhc3MvcGFydGlhbHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vc2Fzcy9wYXJ0aWFscy9fbWl4aW5zLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBR0EsV0FBQTtBQUVBO0VBQ0ksc0JBQUE7QUNISjs7QURNQTtFQUNJLFNBQUE7RUFDQSxpQ0VJWTtFRkhaLGVFbUJXO0VGbEJYLGlDRVNRO0VGUlIsZ0JBQUE7RUFDQSxpQ0VDdUI7RUZBdkIsZ0JFUWlCO0FEWHJCOztBRE1BO0VBQ0ksaUJBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7QUNISjs7QURRQSxlQUFBO0FBR0k7RUFDSSxnQkFBQTtBQ1BSO0FFTEk7RUhXQTtJQUdRLGtCQUFBO0VDTFY7QUFDRjtBRFFJO0VBQ0ksa0JBQUE7QUNOUjtBRFNJO0VHaEJBLHFCQUFBO0VBQ0EsdUJEVGU7RUYwQlgsZUFBQTtFQUNBLG9CQUFBO0FDTlI7QURRUTtFQUNJLHFCRTdCYztBRHVCMUI7QURTSTtFQUNJLHFCRWpDa0I7QUQwQjFCO0FEVUk7RUFDSSxlQUFBO0VBQ0EsY0FBQTtFQUNBLHFCRXZDa0I7QUQrQjFCIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
+/* Splash */
+.splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/images/rzeszów_city_5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 85vh;
+  color: white;
+}
+.splash__title {
+  font-size: 90px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+}
+.splash__description {
+  font-size: 39px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyIsIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsIi4uL3Nhc3MvcGFydGlhbHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vc2Fzcy9wYXJ0aWFscy9fbWl4aW5zLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDR2hCLFdBQUE7QUFFQTtFQUNJLHNCQUFBO0FERko7O0FDS0E7RUFDSSxTQUFBO0VBQ0Esc0JDRGE7RURFYixlQ21CVztFRGxCWCxpQ0NTUTtFRFJSLGdCQUFBO0VBQ0EsNENDSndCO0VES3hCLGNDUWlCO0FGVnJCOztBQ0tBO0VBQ0ksaUJBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7QURGSjs7QUNNQSxlQUFBO0FBRUE7RUFDSSxvQkFBQTtBREpKO0FDTUk7RUFDSSxnQkFBQTtBREpSO0FHVEk7RUZZQTtJQUdRLGtCQUFBO0VERlY7QUFDRjtBQ0tJO0VBQ0ksaUJBQUE7QURIUjtBR2pCSTtFRm1CQTtJQUdRLGtCQUFBO0VERFY7QUFDRjtBQ0lJO0VFcEJBLHFCQUFBO0VBQ0EscUJEZGM7RURtQ1YsZUFBQTtFQUNBLG9CQUFBO0FERFI7QUNHSTtFQUNJLHVCQ3RDbUI7QUZxQzNCO0FDSUk7RUFDSSxlQUFBO0VBQ0EsY0FBQTtFQUNBLHVCQzVDbUI7QUYwQzNCOztBQ01BLFdBQUE7QUFFQTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1EQUFBO0VBQ0Esc0JBQUE7RUFDQSw0QkFBQTtFQUNBLDJCQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7QURKSjtBQ01JO0VBQ0ksZUFBQTtFQUNBLGdDQ3ZETTtFRHdETixnQkN0RFc7QUZrRG5CO0FDT0k7RUFDSSxlQUFBO0VBQ0EsZ0NDN0RNO0VEOEROLGdCQzVEVztBRnVEbkIiLCJmaWxlIjoic3R5bGUuY3NzIn0= */

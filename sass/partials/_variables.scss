@@ -1,5 +1,5 @@
 // THEME ( Allowed values: Dark, Light )
-$theme: Dark;
+$theme: Light;
 
 // COLORS
 $text-color: rgb(19, 17, 17);
@@ -16,17 +16,17 @@ $text-secondary-color: rgb(163, 139, 1);
     $text-color:rgba(243, 241, 241, 0.959);
     $body-background-color:rgb(12, 12, 12);
     $links-color:  rgb(163, 139, 1);
-    $text-secondary-color:rgb(175, 3, 3);
+    $text-secondary-color: rgba(0, 0, 255, 0.829);
 }
 
 // FONTS
 $text-font: 'Roboto', sans-serif;
 $header-font: 'Kanit', sans-serif;
-$font-weight-normal: 500;
-$font-weight-bold: 900;
+$font-weight-normal: 00;
+$font-weight-bold: 700;
 
 
 // SIZES
-$content-title-size: 40px;
-$content-description-size: 25px;
+$content-title-size: 60px;
+$content-description-size: 26px;
 $content-size: 16px;

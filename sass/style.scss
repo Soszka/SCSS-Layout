@@ -18,35 +18,35 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
 
-
 /* Navigation */
 
 nav {
-    .navigation-logo {
+    padding-bottom: 40px;
+    
+    .navigation__logo {
         text-align: left;
         @include large-screens {
             text-align: center;
         }
     }
 
-    .navigation-list {
-        text-align: center;
+    .navigation__list {
+        text-align: right;
+        @include large-screens {
+            text-align: center;
+        }
     }
 
     a {
         @include links;
-        font-size: $content-size * 1.5;
+        font-size: $content-size * 2;
         font-family: cursive;
-
-        span {
-            color: $text-secondary-color;
-        }
     }
     a:hover {
         color: $text-secondary-color;
@@ -56,6 +56,34 @@ nav {
         font-size: 30px;
         margin: 0 10px;
         color: $text-secondary-color;
+    }
+}
+
+/* Splash */
+
+.splash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('/images/rzeszów_city_5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 85vh;
+    color: white;
+
+    &__title {
+        font-size: $content-title-size * 1.5;
+        font-family: $header-font;
+        font-weight: $font-weight-bold;
+    }
+
+    &__description {
+        font-size: $content-description-size * 1.5;
+        font-family: $header-font;
+        font-weight: $font-weight-bold;
     }
 }
 
