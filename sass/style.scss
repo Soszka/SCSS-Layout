@@ -1,0 +1,70 @@
+@import 'partials/variables.scss';
+@import 'partials/mixins';
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: $text-color;
+    font-size: $content-size;
+    font-family: $text-font;
+    line-height: 1.6;
+    background-color: $body-background-color;
+    font-weight: $font-weight-normal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+
+/* Navigation */
+
+nav {
+    .navigation-logo {
+        text-align: left;
+        @include large-screens {
+            text-align: center;
+        }
+    }
+
+    .navigation-list {
+        text-align: center;
+    }
+
+    a {
+        @include links;
+        font-size: $content-size * 1.5;
+        font-family: cursive;
+
+        span {
+            color: $text-secondary-color;
+        }
+    }
+    a:hover {
+        color: $text-secondary-color;
+    }
+
+    i {
+        font-size: 30px;
+        margin: 0 10px;
+        color: $text-secondary-color;
+    }
+}
+
+
+
+
+
+
+
+
+
+
