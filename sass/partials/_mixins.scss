@@ -22,6 +22,12 @@
     }
 }
 
+@mixin extra-large-screens () {
+    @media only screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
 @mixin links {
     text-decoration: none;
     color: $links-color;

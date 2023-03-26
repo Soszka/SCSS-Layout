@@ -13,14 +13,39 @@ body {
     font-size: $content-size;
     font-family: $text-font;
     line-height: 1.6;
-    background-color: $body-background-color;
     font-weight: $font-weight-normal;
+    background: $body-background-color;
+    background-size: 400% 400%;
+    animation: pulsate 5s ease-in-out infinite;
 }
+
+@keyframes pulsate {
+    0% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
 
 .container {
     max-width: 1600px;
     margin: 0 auto;
     padding: 40px 20px;
+}
+
+.section-title {
+    font-size: $content-title-size;
+    @include large-screens {
+        font-size: $content-title-size * 0.75;
+    }
+}
+
+.section-description {
+    font-size: $content-description-size;
 }
 
 
@@ -31,21 +56,21 @@ nav {
     
     .navigation__logo {
         text-align: left;
-        @include large-screens {
+        @include extra-large-screens {
             text-align: center;
         }
     }
 
     .navigation__list {
         text-align: right;
-        @include large-screens {
+        @include extra-large-screens {
             text-align: center;
         }
     }
 
     a {
         @include links;
-        font-size: $content-size * 2;
+        font-size: $content-size * 1.55;
         font-family: cursive;
     }
     a:hover {
@@ -54,7 +79,7 @@ nav {
 
     i {
         font-size: 30px;
-        margin: 0 10px;
+        margin: 0 5px;
         color: $text-secondary-color;
     }
 }
@@ -78,12 +103,18 @@ nav {
         font-size: $content-title-size * 1.5;
         font-family: $header-font;
         font-weight: $font-weight-bold;
+        @include large-screens {
+            font-size: $content-title-size;
+        }
     }
 
     &__description {
         font-size: $content-description-size * 1.5;
         font-family: $header-font;
         font-weight: $font-weight-bold;
+        @include large-screens {
+            font-size: $content-description-size;
+        }
     }
 }
 
