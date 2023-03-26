@@ -29,7 +29,7 @@ body {
     100% {
       background-position: 50% 0%;
     }
-  }
+}
 
 .container {
     max-width: 1600px;
@@ -39,6 +39,8 @@ body {
 
 .section-title {
     font-size: $content-title-size;
+    margin-top: 30px;
+    @include section-header;
     @include large-screens {
         font-size: $content-title-size * 0.75;
     }
@@ -46,6 +48,10 @@ body {
 
 .section-description {
     font-size: $content-description-size;
+    @include section-header;
+    @include large-screens {
+        font-size: $content-title-size * 0.75;
+    }
 }
 
 
@@ -115,6 +121,26 @@ nav {
         @include large-screens {
             font-size: $content-description-size;
         }
+    }
+
+    &__form {
+        margin-top: 20px;
+        font-size: 30px;
+        font-family: $header-font;
+        font-weight: $font-weight-bold;
+        background: linear-gradient(to right, #000000, #0408f7);
+        padding: 20px 50px;
+        border-radius: 25%;
+        @include large-screens {
+            font-size: 24px;
+            padding: 15px 40px;
+        }
+    }
+
+    &__btn {
+        @include button(rgb(90, 77, 0), rgb(226, 192, 0));
+        margin-top: 20px;
+        color: white;
     }
 }
 

@@ -32,3 +32,19 @@
     text-decoration: none;
     color: $links-color;
 }
+
+@mixin button ($color-one, $color-two) {
+    @include links;
+    font-size: $content-size * 1.5;
+    font-family: $text-font;
+    padding: 10px 20px;
+    border-radius: 25%;
+    background-color: linear-gradient( to right, $color-one, $color-two);
+}
+
+@mixin section-header {
+    text-align: center;
+    font-family: $header-font;
+    font-weight: $font-weight-bold;
+    padding: 8px;
+}

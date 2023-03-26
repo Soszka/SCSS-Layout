@@ -35,6 +35,11 @@ body {
 
 .section-title {
   font-size: 60px;
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 700;
+  padding: 8px;
 }
 @media only screen and (max-width: 992px) {
   .section-title {
@@ -44,6 +49,15 @@ body {
 
 .section-description {
   font-size: 26px;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 700;
+  padding: 8px;
+}
+@media only screen and (max-width: 992px) {
+  .section-description {
+    font-size: 45px;
+  }
 }
 
 /* Navigation */
@@ -115,5 +129,31 @@ nav i {
     font-size: 26px;
   }
 }
+.splash__form {
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 700;
+  background: linear-gradient(to right, #000000, #0408f7);
+  padding: 20px 50px;
+  border-radius: 25%;
+}
+@media only screen and (max-width: 992px) {
+  .splash__form {
+    font-size: 24px;
+    padding: 15px 40px;
+  }
+}
+.splash__btn {
+  text-decoration: none;
+  color: rgb(163, 139, 1);
+  font-size: 30px;
+  font-family: "EB Garamond", serif;
+  padding: 10px 20px;
+  border-radius: 25%;
+  background-color: linear-gradient(to right, rgb(90, 77, 0), rgb(226, 192, 0));
+  margin-top: 20px;
+  color: white;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyIsIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsIi4uL3Nhc3MvcGFydGlhbHMvX3ZhcmlhYmxlcy5zY3NzIiwiLi4vc2Fzcy9wYXJ0aWFscy9fbWl4aW5zLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FDR2hCLFdBQUE7QUFFQTtFQUNJLHNCQUFBO0FERko7O0FDS0E7RUFDSSxTQUFBO0VBQ0EsaUNDS1k7RURKWixlQ29CVztFRG5CWCxpQ0NVUTtFRFRSLGdCQUFBO0VBQ0EsY0NVaUI7RURUakIseUZDQ3dCO0VEQXhCLDBCQUFBO0VBQ0EsMENBQUE7QURGSjs7QUNLQTtFQUNJO0lBQ0UsMkJBQUE7RURGSjtFQ0lFO0lBQ0UsNkJBQUE7RURGSjtFQ0lFO0lBQ0UsMkJBQUE7RURGSjtBQUNGO0FDS0E7RUFDSSxpQkFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtBREhKOztBQ01BO0VBQ0ksZUNWaUI7QUZPckI7QUdsQkk7RUZvQko7SUFHUSxlQUFBO0VERE47QUFDRjs7QUNJQTtFQUNJLGVDaEJ1QjtBRmUzQjs7QUNLQSxlQUFBO0FBRUE7RUFDSSxvQkFBQTtBREhKO0FDS0k7RUFDSSxnQkFBQTtBREhSO0FHN0JJO0VGK0JBO0lBR1Esa0JBQUE7RUREVjtBQUNGO0FDSUk7RUFDSSxpQkFBQTtBREZSO0FHckNJO0VGc0NBO0lBR1Esa0JBQUE7RURBVjtBQUNGO0FDR0k7RUV2Q0EscUJBQUE7RUFDQSx1QkRkZTtFRHNEWCxlQUFBO0VBQ0Esb0JBQUE7QURBUjtBQ0VJO0VBQ0ksK0JDekRtQjtBRnlEM0I7QUNHSTtFQUNJLGVBQUE7RUFDQSxhQUFBO0VBQ0EsK0JDL0RtQjtBRjhEM0I7O0FDS0EsV0FBQTtBQUVBO0VBQ0ksYUFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsbURBQUE7RUFDQSxzQkFBQTtFQUNBLDRCQUFBO0VBQ0EsMkJBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtBREhKO0FDS0k7RUFDSSxlQUFBO0VBQ0Esd0NDL0VNO0VEZ0ZOLGdCQzlFVztBRjJFbkI7QUdsRkk7RUZrRkE7SUFLUSxlQzVFUztFRjJFbkI7QUFDRjtBQ0lJO0VBQ0ksZUFBQTtFQUNBLHdDQ3hGTTtFRHlGTixnQkN2Rlc7QUZxRm5CO0FHNUZJO0VGMkZBO0lBS1EsZUNwRmU7RUZvRnpCO0FBQ0YiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
+/*# sourceMappingURL=style.css.map */
