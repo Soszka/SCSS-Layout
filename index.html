@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="splash">
         <div class="container">
             <nav>
                 <div class="row">
@@ -23,19 +23,19 @@
                     </div>
                     <div class="col-12 col-xxl-8 navigation__list">
                         <div class="row">
-                            <div class="col-6 col-xxl-3 navigation__list__item">
+                            <div class="col-6 col-xxl-3">
                                 <i class="fa-solid fa-water"></i>
                                 <a href="#monuments" class="navigation-link">Nature</a>
                             </div>
-                            <div class="col-6 col-xxl-3 navigation__list__item">
+                            <div class="col-6 col-xxl-3">
                                 <i class="fa-sharp fa-solid fa-champagne-glasses"></i>
                                 <a href="#entertainment" class="navigation-link">Entertain</a>
                             </div>
-                            <div class="col-6 col-xxl-3 navigation__list__item">
+                            <div class="col-6 col-xxl-3">
                                 <i class="fa-solid fa-book"></i>
                                 <a href="#nature" class="navigation-link">Education</a>
                             </div>
-                            <div class="col-6 col-xxl-3 navigation__list__item">
+                            <div class="col-6 col-xxl-3">
                                 <i class="fa-solid fa-building-columns"></i>
                                 <a href="#education" class="navigation-link">Monuments</a>
                             </div>
@@ -43,15 +43,31 @@
                     </div>
                 </div>
             </nav>
-            <div class="splash">
+            <div class="splash__content">
                 <h1 class="splash__title">Welcome in Rzeszów</h1>
                 <h3 class="splash__description">I encourage you to see my website about the city I come from - Rzeszów<br>I hope you'll like it</h3>
-                <div class="splash__form">
-                    <p>Choose motive</p>
-                    <label for="dark"><input type="radio" id="dark" name="theme" value="dark"> Dark</label>
-                    <label for="light"><input type="radio" id="light" name="theme" value="light"> Light</label>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="splash__form">
+                            <div class="splash__form__description">
+                                <p>Choose motive</p>
+                                <input type="radio" name="theme" id="dark" value="dark" hidden>
+                                <label class="radio" for="dark">
+                                    <span></span>
+                                    <p> Dark</p>
+                                </label>
+                                <input type="radio" name="theme" id="light" value="light" hidden>
+                                <label class="radio" for="light">
+                                    <span></span>
+                                    <p> Light</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="splash__btn">Next section</a>
+                    </div>
                 </div>
-                <a href="#" class="splash__btn">Next section</a>
             </div>
         </div>
     </header>

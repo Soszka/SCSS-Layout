@@ -36,10 +36,17 @@
 @mixin button ($color-one, $color-two) {
     @include links;
     font-size: $content-size * 1.5;
-    font-family: $text-font;
-    padding: 10px 20px;
-    border-radius: 25%;
-    background-color: linear-gradient( to right, $color-one, $color-two);
+    font-family: $header-font;
+    padding: 20px 40px;
+    border-radius: 10%;
+    border: 2px solid $color-one;
+    box-shadow: 0px 0px 20px $color-one;
+    background: linear-gradient(to bottom right, $color-one, $color-two);
+    transition: all 1s;
+    &:hover {
+        box-shadow: 0px 0px 50px $color-one;
+        border: 2px solid $color-two;
+    }
 }
 
 @mixin section-header {

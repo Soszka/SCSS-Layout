@@ -77,39 +77,45 @@ nav {
     a {
         @include links;
         font-size: $content-size * 1.55;
-        font-family: cursive;
+        font-family: $header-font;
     }
     a:hover {
-        color: $text-secondary-color;
+        color: $text-color;
     }
 
     i {
         font-size: 30px;
         margin: 0 5px;
-        color: $text-secondary-color;
+        color: $text-color;
     }
 }
 
 /* Splash */
 
+
 .splash {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-image: url('/images/rzeszów_city_5.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 85vh;
-    color: white;
+        background-image: $body-background-image;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+
+    &__content {
+        margin: 8vh 0 5vh 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        @include extra-large-screens {
+            margin: 4vh 0 3vh 0;
+        }
+    }
 
     &__title {
         font-size: $content-title-size * 1.5;
         font-family: $header-font;
         font-weight: $font-weight-bold;
-        @include large-screens {
+        @include extra-large-screens {
             font-size: $content-title-size;
         }
     }
@@ -118,30 +124,71 @@ nav {
         font-size: $content-description-size * 1.5;
         font-family: $header-font;
         font-weight: $font-weight-bold;
-        @include large-screens {
+        @include extra-large-screens {
             font-size: $content-description-size;
         }
     }
 
     &__form {
-        margin-top: 20px;
-        font-size: 30px;
-        font-family: $header-font;
-        font-weight: $font-weight-bold;
-        background: linear-gradient(to right, #000000, #0408f7);
-        padding: 20px 50px;
-        border-radius: 25%;
+        position: relative;
+        margin: 40px 30px;
+        background: linear-gradient(to right, rgb(82, 69, 0), $links-color);
+        border: 2px solid  $links-color;
+        border-radius: 10%;
+        box-shadow: 0px 0px 20px $links-color;
+        width: 400px;
+        height: 200px;
+        @include extra-large-screens {
+            width: 350px;
+            height: 150px;
+        }
         @include large-screens {
-            font-size: 24px;
-            padding: 15px 40px;
+            width: 250px;
+            height: 125px;
+        }
+
+        &__description {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            font-size: $content-size * 2;
+            font-family: $header-font;
+            font-weight: $font-weight-bold;
+            @include extra-large-screens {
+                font-size: $content-size * 1.5;
+            }
+            @include large-screens {
+                font-size: $content-size * 1.25;
+            }
         }
     }
 
+
     &__btn {
-        @include button(rgb(90, 77, 0), rgb(226, 192, 0));
-        margin-top: 20px;
+        @include button(rgb(251, 255, 0), rgb(87, 74, 0));
+        display: flex;
+        float: right;
+        align-items: center;
+        justify-content: center;
+        font-size: $content-size * 2.5;
+        margin: 40px 30px;
         color: white;
+        width: 400px;
+        height: 200px;
+        @include extra-large-screens {
+            font-size: $content-size * 2;
+            width: 350px;
+            height: 150px;
+        }
+        @include large-screens {
+            font-size: $content-size * 1.75;
+            width: 250px;
+            height: 125px;
+        }
     }
+    
 }
 
 

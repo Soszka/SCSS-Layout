@@ -6,18 +6,21 @@ $text-color: rgb(19, 17, 17);
 $text-secondary-color: rgb(163, 139, 1);
 $links-color: rgb(175, 3, 3);
 $body-background-color: rgba(243, 241, 241, 0.959);
+$body-background-image: url('/images/rzeszów_city_1.jpg');
 
 
 @if $theme == Light {
     $text-color: rgb(19, 17, 17);
-    $text-secondary-color: rgb(163, 139, 1);
+    $text-secondary-color: rgb(209, 178, 0);
     $links-color: rgb(175, 3, 3);
     $body-background-color: linear-gradient(to bottom right, #cfcffc, #fdd1d1, #cefafa, #fcf6ce, #f5d5fc);
+    $body-background-image: url('/images/rzeszów_city_2.jpg');
 }  @else if $theme == Dark {
     $text-color:rgba(243, 241, 241, 0.959);
     $body-background-color: linear-gradient(to bottom right, #00003a, #310000, #002020, #2e2900, #290031);
-    $links-color:  rgb(163, 139, 1);
+    $links-color:  rgb(252, 214, 1);
     $text-secondary-color: rgba(18, 18, 230, 0.808);
+    $body-background-image: url('/images/rzeszów_city_6.jpg');
 }
 
 // FONTS
