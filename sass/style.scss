@@ -162,6 +162,51 @@ nav {
             @include large-screens {
                 font-size: $content-size * 1.25;
             }
+
+            label {
+                font-size: $content-size * 2;
+                cursor: pointer;
+                line-height: 30px;
+                margin: 0 15px;
+                @include extra-large-screens {
+                    font-size: $content-size * 1.5;
+                    line-height: 15px;
+                }
+                @include large-screens {
+                    font-size: $content-size * 1.25;
+                    line-height: 10px;
+                }
+            }
+              
+            span {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                border: 4px solid white;
+                position: relative;
+                margin-bottom: 20px;
+                @include extra-large-screens {
+                    width: 30px;
+                    height: 30px;
+                }
+                @include large-screens {
+                    width: 25x;
+                    height: 25px;
+                }
+            }
+              
+            input[type="radio"]:checked + .radio > span:before {
+                content: "";
+                position: absolute;
+                height: 50%;
+                width: 50%;
+                border-radius: 50%;
+                background-color: $links-color;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 
