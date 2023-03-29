@@ -5,13 +5,13 @@
 }
 
 @mixin small-screens () {
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 576px) {
         @content;
     }
 }
 
 @mixin medium-screens () {
-    @media only screen and (max-width: 680px) {
+    @media only screen and (max-width: 768px) {
         @content;
     }
 }
@@ -23,14 +23,18 @@
 }
 
 @mixin extra-large-screens () {
-    @media only screen and (max-width: 1400px) {
+    @media only screen and (max-width: 1200px) {
         @content;
     }
 }
 
+
 @mixin links {
     text-decoration: none;
     color: $links-color;
+    &:hover {
+        color: $text-color;
+    }
 }
 
 @mixin button ($color-one, $color-two) {
