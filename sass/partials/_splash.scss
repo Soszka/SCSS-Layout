@@ -1,0 +1,179 @@
+.splash {
+    background-image: $body-background-image;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+
+    &__content {
+        margin: 6vh 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        @include large-screens {
+            margin: 3vh 0;
+        }
+    }
+
+    &__title {
+        font-size: $content-title-size * 1.5;
+        font-family: $header-font;
+        font-weight: $font-weight-bold;
+        @include extra-large-screens {
+            font-size: $content-title-size;
+        }
+        @include medium-screens {
+            font-size: $content-title-size * 0.75;
+        }
+    }
+
+    &__description {
+        font-size: $content-description-size * 1.5;
+        font-family: $header-font;
+        font-weight: $font-weight-bold;
+        @include extra-large-screens {
+            font-size: $content-description-size;
+        }
+        @include medium-screens {
+            font-size: $content-description-size * 0.75;
+        }
+    }
+
+    &__form {
+        position: relative;
+        margin: 40px 20px;
+        background: linear-gradient(to right, rgb(82, 69, 0), $links-color);
+        border: 2px solid  $links-color;
+        border-radius: 10%;
+        box-shadow: 0px 0px 20px $links-color;
+        width: 350px;
+        height: 175px;
+        @include extra-large-screens {
+            width: 300px;
+            height: 150px;
+        }
+        @include large-screens {
+            width: 250px;
+            height: 125px;
+        }
+        @include medium-screens {
+            width: 140px;
+            height: 70px;
+            margin: 20px auto;
+        }
+
+
+        &__description {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            font-size: $content-size * 2;
+            font-family: $header-font;
+            @include extra-large-screens {
+                font-size: $content-size * 1.75;
+            }
+            @include large-screens {
+                font-size: $content-size * 1.5;
+            }
+            @include medium-screens {
+                font-size: $content-size * 0.9;
+            }
+            
+            p {
+            margin-bottom: 0;
+            }
+
+            label {
+                font-size: $content-size * 2;
+                cursor: pointer;
+                line-height: 30px;
+                margin: 0 15px;
+                @include extra-large-screens {
+                    line-height: 20px;
+                    font-size: $content-size * 1.75;
+                }
+                @include large-screens {
+                    line-height: 15px;
+                    font-size: $content-size * 1.5;
+                }
+                @include medium-screens {
+                    line-height: 5px;
+                    font-size: $content-size * 0.9;
+                    margin: 0 5px;
+                }
+            }
+            
+            span {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                border: 4px solid white;
+                position: relative;
+                margin: 5px 0;
+                @include extra-large-screens {
+                    width: 30px;
+                    height: 30px;
+                }
+                @include large-screens {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid white;
+                }
+                @include medium-screens {
+                    width: 15px;
+                    height: 15px;
+                    border: 2px solid white;
+                }
+            }
+            
+            input[type="radio"]:checked + .radio > span:before {
+                content: "";
+                position: absolute;
+                height: 50%;
+                width: 50%;
+                border-radius: 50%;
+                background-color: $links-color;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+
+    &__btn {
+        @include button(rgb(251, 255, 0), rgb(87, 74, 0));
+        display: flex;
+        float: right;
+        align-items: center;
+        justify-content: center;
+        font-size: $content-size * 2.5;
+        margin: 40px 20px;
+        color: white;
+        width: 400px;
+        height: 200px;
+        width: 350px;
+        height: 175px;
+        @include extra-large-screens {
+            font-size: $content-size * 2;
+            width: 300px;
+            height: 150px;
+        }
+        @include large-screens {
+            font-size: $content-size * 1.5;
+            width: 250px;
+            height: 125px;
+        }
+        @include medium-screens {
+            font-size: $content-size;
+            width: 140px;
+            height: 70px;
+            float: none;
+            margin: 10px auto;
+        }
+    }  
+}
