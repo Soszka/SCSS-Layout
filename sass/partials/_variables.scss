@@ -18,7 +18,7 @@ $body-background-image: url('https://i.postimg.cc/gJcTXQ3f/rzesz-w-city-6.jpg');
 }  @else if $theme == Dark {
     $text-color:rgba(243, 241, 241, 0.959);
     $text-secondary-color: rgb(65, 55, 0);
-    $links-color:  rgb(219, 223, 1);
+    $links-color:  rgb(196, 199, 0);
     $body-background-color: linear-gradient(to bottom right, #00003a, #310000, #002020, #2e2900, #290031);
     $body-background-image: url('https://i.postimg.cc/gJcTXQ3f/rzesz-w-city-6.jpg');
 }
