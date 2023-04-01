@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -37,19 +37,19 @@ body {
     margin-top: 30px;
     @include section-header;
     @include large-screens {
-        font-size: $content-title-size * 0.75;
+        font-size: $content-title-size * 0.8;
     }
     @include medium-screens {
-        font-size: $content-title-size * 0.5;
+        font-size: $content-title-size * 0.6;
     }
 }
 
 .section-description {
     font-size: $content-description-size;
-    margin: 10px 0 15px 0;
+    margin: 10px 0 40px 0;
     @include section-header;
     @include large-screens {
-        font-size: $content-description-size * 0.7;
-        margin: 6px 0 9px 0;
+        font-size: $content-description-size * 0.75;
+        margin: 6px 0 20px 0;
     }
 }
