@@ -1,0 +1,35 @@
+.preview {
+
+    &__content {
+        margin: 20px;
+        font-size: $content-size * 1.25;
+        font-weight: 600;
+        @include medium-screens {
+            font-size: $content-size;
+        }
+        a {
+            @include links;
+            color: red;
+        }
+    }
+
+    &__button {
+        @include button(red, rgb(68, 0, 0));
+        display: inline-block;
+        margin: 50px 20px;
+        @include medium-screens {
+            display: none;
+        }
+    }
+
+    .carousel-inner {
+        border-radius: 20%;
+        box-shadow: 0px 0px 25px $text-color;
+    }
+    
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 5rem; 
+        height: 5rem; 
+        color: $text-color;
+    }
+}

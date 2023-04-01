@@ -12,6 +12,7 @@ body {
     background: $body-background-color;
     background-size: 400% 400%;
     animation: pulsate 5s ease-in-out infinite;
+    scroll-behavior: smooth;
 }
 
 @keyframes pulsate {
