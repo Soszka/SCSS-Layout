@@ -33,7 +33,7 @@ body {
     padding: 40px 20px;
 }
 
-.section-title {
+.section__title {
     font-size: $content-title-size;
     margin-top: 30px;
     @include section-header;
@@ -45,9 +45,9 @@ body {
     }
 }
 
-.section-description {
+.section__description {
     font-size: $content-description-size;
-    margin: 10px 0 40px 0;
+    margin: 10px 0 50px 0;
     @include section-header;
     @include large-screens {
         font-size: $content-description-size * 0.75;
