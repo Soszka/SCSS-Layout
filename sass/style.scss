@@ -17,8 +17,15 @@
         flex-direction: column;
         text-align: center;
         transition: transform 1.5s ease;
+        margin: 40px 0;
+        padding: 10px;
+        z-index: 0;
         &:hover {
-           transform: scale(1.2); 
+           transform: scale(1.1);
+           z-index: 1;
+           @include extra-large-screens {
+            transform: scale(1.05);
+            }
         }
 
         &__image {
@@ -37,12 +44,20 @@
 
         &__description {
             height: 100px;
+            @include extra-large-screens {
+                width: 325px;
+                font-size: 0.8 $content-size;
+                height: 90px;
+            }
         }
 
         &__button {
             @include button(rgb(0, 216, 0),rgb(0, 54, 0));
-            width: 90%;
+            width: 92%;
             height: 90px;
+            @include extra-large-screens {
+                width: 250px;
+            }
         }
 
 
