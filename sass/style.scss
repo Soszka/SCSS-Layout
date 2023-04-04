@@ -5,64 +5,8 @@
 @import 'partials/navigation';
 @import 'partials/splash';
 @import 'partials/preview';
-
-
-// Monuments
-
-.monuments {
-
-    &__item {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        transition: transform 1.5s ease;
-        margin: 40px 0;
-        padding: 10px;
-        z-index: 0;
-        &:hover {
-           transform: scale(1.1);
-           z-index: 1;
-           @include extra-large-screens {
-            transform: scale(1.05);
-            }
-        }
-
-        &__image {
-            width:280px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 25%;
-            box-shadow: 0px 0px 25px $text-color;
-        }
-
-        &__name {
-            font-weight: $font-weight-bold;
-            margin: 30px 0 20px;
-            font-family: $header-font;
-        }
-
-        &__description {
-            height: 100px;
-            @include extra-large-screens {
-                width: 325px;
-                font-size: 0.8 $content-size;
-                height: 90px;
-            }
-        }
-
-        &__button {
-            @include button(rgb(0, 216, 0),rgb(0, 54, 0));
-            width: 92%;
-            height: 90px;
-            @include extra-large-screens {
-                width: 250px;
-            }
-        }
+@import 'partials/monuments';
 
 
 
-        
 
-    }
-}
