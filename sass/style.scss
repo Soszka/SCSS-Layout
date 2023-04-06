@@ -8,5 +8,20 @@
 @import 'partials/monuments';
 
 
+// Entertain 
+
+.entertain {
+
+
+    &__item {
+        height: 500px;
+
+        img {
+            width: 80%;
+            height: 4100%;
+            object-fit: cover;
+        }
+    }
+}
 
 
