@@ -43,8 +43,7 @@
             }
 
             .carousel-inner {
-                border-radius: 25%;
-                box-shadow: 0px 0px 25px $text-color;
+                @include border;
 
                 .carousel-item {
                     position: relative;

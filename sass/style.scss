@@ -12,16 +12,44 @@
 
 .entertain {
 
+    &__list {
+        
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            @include button(rgb(0, 198, 212), rgb(0, 30, 39));
+            display: inline-block;
+            margin: 10px 0;
+            padding: 15px 30px;
+            width: 300px;
+            text-align: center;
+        }
+    }
 
     &__item {
-        height: 500px;
+
+        &__description {
+            padding: 25px 20px;
+            text-align: center;
+        }
+        margin: 10 0px;
+        padding: 0 0 5px 0;
+        border: 2px solid $text-color;
+        @include border;
+        overflow: hidden;
+
+        &__description {
+            padding: 25px 20px;
+            text-align: center;
+        }
 
         img {
-            width: 80%;
-            height: 4100%;
+            width: 100%;
+            height: 450px;
             object-fit: cover;
         }
     }
 }
-
 
