@@ -23,7 +23,7 @@
         
 
         &__image {
-            @include border;
+            @include border(20%, 30px);
             width: 280px;
             height: 200px;
             object-fit: cover;
@@ -37,6 +37,7 @@
 
         &__description {
             height: 100px;
+            margin-bottom: 5px;
             @include extra-large-screens {
                 width: 325px;
                 font-size: 0.8 $content-size;

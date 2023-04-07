@@ -47,7 +47,7 @@
 
     &__item {
 
-        @include border;
+        @include border(20%, 30px);
         margin: 10px 0px;
         padding: 0;
         border: 2px solid $text-color;

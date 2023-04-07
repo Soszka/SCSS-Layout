@@ -43,7 +43,7 @@
             }
 
             .carousel-inner {
-                @include border;
+                @include border(25%, 30px);
 
                 .carousel-item {
                     position: relative;
@@ -59,7 +59,7 @@
                         white-space: nowrap;
                         font-size: $content-size * 2;
                         @include small-screens {
-                            font-size: $content-size * 1.5;
+                            font-size: $content-size * 1.25;
                         }
                     }
                 }

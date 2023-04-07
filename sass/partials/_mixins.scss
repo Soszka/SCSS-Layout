@@ -37,17 +37,17 @@
     }
 }
 
-@mixin border {
-    border-radius: 25%;
-    box-shadow: 0px 0px 30px $text-color;
+@mixin border ($radius, $shadow) {
+    border-radius: $radius;
+    box-shadow: 0px 0px $shadow $text-color;
 }
 
 @mixin button ($color-one, $color-two) {
     @include links;
+    @include border(10%, 20px);
     font-size: $content-size * 1.5;
     font-family: $header-font;
     padding: 20px 40px;
-    border-radius: 10%;
     color: $text-color;
     border: 2px solid $color-one;
     box-shadow: 0px 0px 20px $color-one;
@@ -55,7 +55,7 @@
     transition: all 1s;
     &:hover {
         box-shadow: 0px 0px 50px $color-one;
-        border: 2px solid $color-two;
+        border: 3px solid $color-two;
     }
 }
 
