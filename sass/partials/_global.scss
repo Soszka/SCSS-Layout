@@ -31,6 +31,9 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 40px 20px;
+    @include large-screens {
+        padding: 15px;
+    }
 }
 
 .section__title {

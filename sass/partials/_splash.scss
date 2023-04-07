@@ -3,7 +3,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
 
     &__content {
         margin: 6vh 0;
@@ -24,7 +23,7 @@
             font-size: $content-title-size;
         }
         @include medium-screens {
-            font-size: $content-title-size * 0.75;
+            font-size: $content-title-size * 0.7;
         }
     }
 
@@ -173,7 +172,7 @@
             width: 140px;
             height: 70px;
             float: none;
-            margin: 10px auto;
+            margin: 20px auto;
         }
     }  
 }
