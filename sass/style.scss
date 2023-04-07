@@ -19,7 +19,7 @@
         }
 
         a {
-            @include button(rgb(0, 198, 212), rgb(0, 30, 39));
+            @include button(rgb(0, 173, 185), rgb(0, 25, 32));
             display: inline-block;
             margin: 10px 0;
             padding: 15px 30px;
@@ -29,26 +29,35 @@
     }
 
     &__item {
-
-        &__description {
-            padding: 25px 20px;
-            text-align: center;
-        }
+        
         margin: 10 0px;
-        padding: 0 0 5px 0;
+        padding: 0;
         border: 2px solid $text-color;
         @include border;
         overflow: hidden;
+        @include extra-large-screens {
+            width: 80%;
+            margin: 0 auto;
+        }
 
         &__description {
-            padding: 25px 20px;
+            margin-top: 10px;
+            padding: 30px 20px;
             text-align: center;
+            @include extra-large-screens {
+                margin-top: 5px;
+                padding: 25px;
+            }
         }
 
         img {
             width: 100%;
             height: 450px;
             object-fit: cover;
+            @include extra-large-screens {
+                width: 100%;
+                height: 300px;
+            }
         }
     }
 }
