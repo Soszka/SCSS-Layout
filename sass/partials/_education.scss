@@ -7,7 +7,7 @@
         border: none;
 
         .accordion-button {
-            @include button(rgb(163, 2, 2), rgb(52, 0, 0));
+            @include button(rgb(207, 0, 0), rgb(52, 0, 0));
             position: relative;
             height: 125px;
             border-radius: 0%;
@@ -44,9 +44,9 @@
         }
         
         .accordion-body {
-            background: $body-background-color;
+            background: transparent;
             color: $text-color;
-            border: 3px solid rgb(101, 0, 0);
+            border: 2px solid rgb(207, 0, 0);
             border-top: none;
             display: flex;
             @include extra-large-screens {

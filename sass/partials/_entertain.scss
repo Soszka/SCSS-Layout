@@ -41,6 +41,14 @@
                 @include small-screens {
                     font-size: $content-size;
                 }
+
+                i {
+                    margin-left: 10px;
+                    color: rgb(210, 210, 210);
+                    @include mega-large-screens {
+                        display: none;
+                    }
+                }
             }
         }
     }
