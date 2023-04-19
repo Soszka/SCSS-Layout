@@ -38,7 +38,7 @@ body {
 
 .section__title {
     font-size: $content-title-size;
-    margin-top: 30px;
+    margin-top: 60px;
     @include section-header;
     @include large-screens {
         font-size: $content-title-size * 0.8;
