@@ -1,73 +1,75 @@
 @mixin tiny-screens () {
-    @media only screen and (max-width: 320px) {
-        @content;
-    }
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
 }
 
 @mixin small-screens () {
-    @media only screen and (max-width: 576px) {
-        @content;
-    }
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
 }
 
 @mixin medium-screens () {
-    @media only screen and (max-width: 768px) {
-        @content;
-    }
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
 }
 
 @mixin large-screens () {
-    @media only screen and (max-width: 992px) {
-        @content;
-    }
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
 }
 
 @mixin extra-large-screens () {
-    @media only screen and (max-width: 1200px) {
-        @content;
-    }
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin mega-large-screens () {
-    @media only screen and (max-width: 1400px) {
-        @content;
-    }
+  @media only screen and (max-width: 1400px) {
+    @content;
+  }
 }
 
 
 @mixin links {
-    text-decoration: none;
-    color: $links-color;
-    &:hover {
-        color: $text-color;
-    }
+  text-decoration: none;
+  color: $links-color;
+
+  &:hover {
+    color: $text-color;
+  }
 }
 
 @mixin border ($radius, $shadow) {
-    border-radius: $radius;
-    box-shadow: 0px 0px $shadow $text-color;
+  border-radius: $radius;
+  box-shadow: 0px 0px $shadow $text-color;
 }
 
 @mixin button ($color-one, $color-two) {
-    @include links;
-    @include border(10%, 20px);
-    font-size: $content-size * 1.5;
-    font-family: $header-font;
-    padding: 20px 40px;
-    color: $text-color;
-    border: 2px solid $color-one;
-    box-shadow: 0px 0px 20px $color-one;
-    background: linear-gradient(to bottom right, $color-one, $color-two);
-    transition: all 1s;
-    &:hover {
-        box-shadow: 0px 0px 50px $color-one;
-        border: 3px solid $color-two;
-    }
+  @include links;
+  @include border(10%, 20px);
+  font-size: $content-size * 1.5;
+  font-family: $header-font;
+  padding: 20px 40px;
+  color: $text-color;
+  border: 2px solid $color-one;
+  box-shadow: 0px 0px 20px $color-one;
+  background: linear-gradient(to bottom right, $color-one, $color-two);
+  transition: all 1s;
+  
+  &:hover {
+    box-shadow: 0px 0px 50px $color-one;
+    border: 3px solid $color-two;
+  }
 }
 
 @mixin section-header {
-    text-align: center;
-    font-family: $header-font;
-    font-weight: $font-weight-bold;
-    padding: 8px;
+  text-align: center;
+  font-family: $header-font;
+  font-weight: $font-weight-bold;
+  padding: 8px;
 }

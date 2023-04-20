@@ -1,49 +1,49 @@
 .nav {
-    padding-bottom: 40px;
-    @include medium-screens {
-        padding-bottom: 20px;
-    }
-    
-    &__list {
-        text-align: right;
-        @include extra-large-screens {
-            text-align: center;
-        }
-    }
+  padding-bottom: 40px;
+  @include medium-screens {
+    padding-bottom: 20px;
+  }
 
-    a {
-        @include links;
-        font-size: $content-size * 1.18;
-        font-family: $header-font;
-        @include small-screens {
-            font-size: $content-size;
-        }
+  &__list {
+    text-align: right;
+    @include extra-large-screens {
+      text-align: center;
+    }
+  }
+
+  a {
+    @include links;
+    font-size: $content-size * 1.18;
+    font-family: $header-font;
+    @include small-screens {
+      font-size: $content-size;
+    }
+  }
+
+  i {
+    font-size: $content-size;
+    margin: 0 5px;
+    color: $text-color;
+    @include small-screens {
+      font-size: $content-size;
+      display: block;
+    }
+  }
+
+  &__logo {
+    text-align: left;
+    @include extra-large-screens {
+      text-align: center;
+    }
+    @include small-screens {
+      margin-bottom: 20px;
     }
 
     i {
+      @include small-screens {
         font-size: $content-size;
-        margin: 0 5px;
-        color: $text-color;
-        @include small-screens {
-            font-size: $content-size;
-            display: block;
-        }
+        display: none;
+      }
     }
-
-    &__logo {
-        text-align: left;
-        @include extra-large-screens {
-            text-align: center;
-        }
-        @include small-screens {
-            margin-bottom: 20px;
-        }
-            i {
-                @include small-screens {
-                    font-size: $content-size;
-                    display: none;
-                }
-            }
-        
-    }
+  }
 }

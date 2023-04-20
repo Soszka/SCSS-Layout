@@ -2,25 +2,20 @@
 $theme: Dark;
 
 // COLORS
-$text-color: rgb(0, 0, 0);
-$text-secondary-color: rgb(49, 0, 0);
-$links-color: rgb(240, 0, 0);
-$body-background-color: linear-gradient(to bottom right, #cfcffc, #fdd1d1, #cefafa, #fcf6ce, #f5d5fc);
-$body-background-image: url('https://i.postimg.cc/gJcTXQ3f/rzesz-w-city-6.jpg');
+
+$text-color: rgb(0, 0, 0) !default;
+$text-secondary-color: rgb(75, 0, 0) !default;
+$links-color: rgb(221, 3, 3) !default;
+$body-background-color: linear-gradient(to bottom right, #cfcffc, #fdd1d1, #cefafa, #fcf6ce, #f5d5fc) !default;
+$body-background-image: url('https://i.postimg.cc/2SvpY9s4/rzesz-w-city-8.jpg') !default;
 
 
-@if $theme == Light {
-    $text-color: rgb(0, 0, 0);
-    $text-secondary-color: rgb(75, 0, 0);
-    $links-color: rgb(221, 3, 3);
-    $body-background-color: linear-gradient(to bottom right, #cfcffc, #fdd1d1, #cefafa, #fcf6ce, #f5d5fc);
-    $body-background-image: url('https://i.postimg.cc/2SvpY9s4/rzesz-w-city-8.jpg');
-}  @else if $theme == Dark {
-    $text-color:rgba(243, 241, 241, 0.959);
-    $text-secondary-color: rgb(65, 55, 0);
-    $links-color:  rgb(196, 199, 0);
-    $body-background-color: linear-gradient(to bottom right, #00003a, #310000, #002020, #2e2900, #290031);
-    $body-background-image: url('https://i.postimg.cc/gJcTXQ3f/rzesz-w-city-6.jpg');
+@if $theme == Dark {
+  $text-color:rgba(243, 241, 241, 0.959);
+  $text-secondary-color: rgb(65, 55, 0);
+  $links-color:  rgb(196, 199, 0);
+  $body-background-color: linear-gradient(to bottom right, #00003a, #310000, #002020, #2e2900, #290031);
+  $body-background-image: url('https://i.postimg.cc/gJcTXQ3f/rzesz-w-city-6.jpg');
 }
 
 // FONTS

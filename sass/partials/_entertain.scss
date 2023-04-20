@@ -1,96 +1,92 @@
 .entertain {
-
-    &__list {
+  &__list {
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 650px;
+      @include large-screens {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        padding-left: 0;
+      }
+    }
         
-        ul {
-
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 650px;
-            @include large-screens {
-                flex-direction: row;
-                flex-wrap: wrap;
-                height: auto;
-                padding-left: 0;
-            }
-            
-            li {
-                @include large-screens {
-                    text-align: center;
-                    flex: 33%;
-                }
-                @include small-screens {
-                    flex: 50%;
-                }
-            }
-
-            a {
-                @include button(rgb(0, 173, 185), rgb(0, 25, 32));
-                display: inline-block;
-                text-align: center;
-                margin: 10px 0;
-                padding: 15px 20px;
-                width: 70%;
-                @include large-screens {
-                    width: 85%;
-                    font-size: $content-size * 1.25;
-                    padding: 7px 10px;
-                }
-                @include small-screens {
-                    font-size: $content-size;
-                }
-
-                i {
-                    margin-left: 10px;
-                    color: rgb(210, 210, 210);
-                    @include mega-large-screens {
-                        display: none;
-                    }
-                }
-            }
-        }
+    li {
+      @include large-screens {
+        text-align: center;
+        flex: 33%;
+      }
+      @include small-screens {
+        flex: 50%;
+      }
     }
 
-    &__item {
-
-        @include border(20%, 30px);
-        margin: 10px 0px;
-        padding: 0;
-        border: 2px solid $text-color;
-        height: 625px;
-        overflow: hidden;
-        @include large-screens {
-            width: 80%;
-            margin: 0 auto;
-            height: auto;
-        }
-
-        &__description {
-            margin-top: 10px;
-            padding: 30px 20px;
-            text-align: center;
-            @include large-screens {
-                margin-top: 5px;
-                padding: 20px 15px;
-            }
-            @include medium-screens {
-                font-size: $content-size * 0.8;
-            }
-        }
-
-        img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-bottom: 2px solid $text-color;
-            @include large-screens {
-                height: 300px;
-            }
-            @include medium-screens {
-                height: 230px;
-            }
-        }
+    a {
+      @include button(rgb(0, 173, 185), rgb(0, 25, 32));
+      display: inline-block;
+      text-align: center;
+      margin: 10px 0;
+      padding: 15px 20px;
+      width: 70%;
+      @include large-screens {
+        width: 85%;
+        font-size: $content-size * 1.25;
+        padding: 7px 10px;
+      }
+      @include small-screens {
+        font-size: $content-size;
+      }
     }
+
+    i {
+      margin-left: 10px;
+      color: rgb(210, 210, 210);
+      @include mega-large-screens {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    @include border(20%, 30px);
+    margin: 10px 0px;
+    padding: 0;
+    border: 2px solid $text-color;
+    height: 625px;
+    overflow: hidden;
+    @include large-screens {
+      width: 80%;
+      margin: 0 auto;
+      height: auto;
+    }
+  }
+
+  &__item__description {
+    margin-top: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    @include large-screens {
+      margin-top: 5px;
+      padding: 20px 15px;
+    }
+    @include medium-screens {
+      font-size: $content-size * 0.8;
+    }
+  
+    img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-bottom: 2px solid $text-color;
+      @include large-screens {
+        height: 300px;
+      }
+      @include medium-screens {
+        height: 230px;
+      }
+    }
+  }
 }

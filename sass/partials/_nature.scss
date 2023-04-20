@@ -1,36 +1,36 @@
 .nature {
-
-    &__links {
-        @include links;
-        display: inline-block;
-        font-size: $content-description-size * 1.5;
-        &:active {
-            color:rgb(255, 251, 0);
-        }
-        @include large-screens {
-            font-size: $content-description-size;
-        }
+  &__links {
+    @include links;
+    display: inline-block;
+    font-size: $content-description-size * 1.5;
+    @include large-screens {
+      font-size: $content-description-size;
     }
 
-    &__gallery {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        &__item {
-            flex: 33%;
-            margin: 20px auto;
-            text-align: center;
-            @include large-screens {
-                margin: 20px 10px;
-            }
-          
-            img {
-                @include border(15%, 15px);
-                height: 170px;
-                width: 90%;
-                object-fit: cover;
-            }
-        }
+    &:active {
+      color: rgb(255, 251, 0);
     }
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__item {
+      flex: 33%;
+      margin: 20px auto;
+      text-align: center;
+      @include large-screens {
+        margin: 20px 10px;
+      }
+
+      img {
+        @include border(15%, 15px);
+        height: 170px;
+        width: 90%;
+        object-fit: cover;
+      }
+    }
+  }
 }

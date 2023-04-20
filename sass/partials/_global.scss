@@ -1,59 +1,61 @@
 *, *::before, *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    color: $text-color;
-    font-size: $content-size;
-    font-family: $text-font;
-    line-height: 1.6;
-    font-weight: $font-weight-normal;
-    background: $body-background-color;
-    background-size: 400% 400%;
-    animation: pulsate 5s ease-in-out infinite;
-    scroll-behavior: smooth;
+  margin: 0;
+  color: $text-color;
+  font-size: $content-size;
+  font-family: $text-font;
+  line-height: 1.6;
+  font-weight: $font-weight-normal;
+  background: $body-background-color;
+  background-size: 400% 400%;
+  animation: pulsate 5s ease-in-out infinite;
+  scroll-behavior: smooth;
 }
 
 @keyframes pulsate {
-    0% {
-      background-position: 50% 0%;
-    }
-    50% {
-      background-position: 50% 100%;
-    }
-    100% {
-      background-position: 50% 0%;
-    }
+  0% {
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+  
+  100% {
+    background-position: 50% 0%;
+  }
 }
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    @include large-screens {
-        padding: 20px 10px;
-    }
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  @include large-screens {
+    padding: 20px 10px;
+  }
 }
 
 .section__title {
-    font-size: $content-title-size;
-    margin-top: 60px;
-    @include section-header;
-    @include large-screens {
-        font-size: $content-title-size * 0.8;
-    }
-    @include medium-screens {
-        font-size: $content-title-size * 0.6;
-    }
+  font-size: $content-title-size;
+  margin-top: 60px;
+  @include section-header;
+  @include large-screens {
+    font-size: $content-title-size * 0.8;
+  }
+  @include medium-screens {
+    font-size: $content-title-size * 0.6;
+  }
 }
 
 .section__description {
-    font-size: $content-description-size;
-    margin: 10px 0 50px 0;
-    @include section-header;
-    @include large-screens {
-        font-size: $content-description-size * 0.75;
-        margin: 6px 0 20px 0;
-    }
+  font-size: $content-description-size;
+  margin: 10px 0 50px 0;
+  @include section-header;
+  @include large-screens {
+    font-size: $content-description-size * 0.75;
+    margin: 6px 0 20px 0;
+  } 
 }

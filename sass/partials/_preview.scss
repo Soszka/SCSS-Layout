@@ -1,75 +1,75 @@
 .preview {
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: $content-size * 1.25;
+    font-weight: 600;
+    @include medium-screens {
+      font-size: $content-size;
+    }
 
-    &__content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px;
+    a {
+      @include links;
+      color: red;
+    }
+  }
+
+  &__button {
+    @include button(red, rgb(68, 0, 0));
+    display: inline-block;
+    margin: 20px;
+    @include extra-large-screens {
+      display: none;
+    }
+  }
+
+  &__carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel {
+      width: 540px;
+      height: 350px;
+      @include extra-large-screens {
+        width: 500px;
+        height: 320px;
+      }
+      @include small-screens {
+        width: 350px;
+        height: 225px;
+      }
+    }
+
+    .carousel-inner {
+      @include border(25%, 30px);
+    }
+
+    .carousel-item {
+      position: relative;
+    }
+
+    h3 {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: $header-font;
+      font-weight: $font-weight-bold;
+      white-space: nowrap;
+      font-size: $content-size * 2;
+      @include small-screens {
         font-size: $content-size * 1.25;
-        font-weight: 600;
-        @include medium-screens {
-            font-size: $content-size;
-        }
-        a {
-            @include links;
-            color: red;
-        }
+      }
     }
 
-    &__button {
-        @include button(red, rgb(68, 0, 0));
-        display: inline-block;
-        margin: 20px;
-        @include extra-large-screens {
-            display: none;
-        }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      width: 5rem;
+      height: 5rem;
+      color: $text-color;
     }
-
-    &__carousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .carousel {
-            width: 540px;
-            height: 350px;
-            @include extra-large-screens {
-                width: 500px;
-                height: 320px;
-            }
-            @include small-screens {
-                width: 350px;
-                height: 225px;
-            }
-
-            .carousel-inner {
-                @include border(25%, 30px);
-
-                .carousel-item {
-                    position: relative;
-                    
-                    h3 {
-                        position: absolute;
-                        top: 85%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        color: white;
-                        font-family: $header-font;
-                        font-weight: $font-weight-bold;
-                        white-space: nowrap;
-                        font-size: $content-size * 2;
-                        @include small-screens {
-                            font-size: $content-size * 1.25;
-                        }
-                    }
-                }
-            }
-
-            .carousel-control-prev-icon, .carousel-control-next-icon {
-                width: 5rem; 
-                height: 5rem; 
-                color: $text-color;
-            }
-        }
-    }
+  }
 }
