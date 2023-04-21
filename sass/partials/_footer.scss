@@ -1,15 +1,16 @@
 .footer__icons {
   display: flex;
   justify-content: center;
-  border-top: 5px solid rgb(0, 149, 255);
+  border-top: 5px solid rgb(0, 191, 0);
 
   i {
     font-size: 70px;
     margin: 15px 30px;
     padding: 5px 10px;
-    color: rgb(0, 149, 255);
+    color: rgb(0, 191, 0);
     @include large-screens {
       font-size: 40px;
+      margin: 7.5px 15px;
     }
 
     &:hover {

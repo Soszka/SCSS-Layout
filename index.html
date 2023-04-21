@@ -313,11 +313,19 @@
     </section>
 
     <section id="form-section">
-        <div class="container">
+        <div class="container form">
             <h1 class="section__title">Leave us opinion</h1>
             <h3 class="section__description">If you are interested in Rzeszów or you would have some questions about this city,
                 fill in the form below ! We will contact with you as soon as possible.
             </h3>
+            <form>
+                <input type="text" id="first-name" autocomplete="off" name="first-name" placeholder="First Name">
+                <input type="text" id="last-name" autocomplete="off" name="last-name" placeholder="Last Name">
+                <input type="email" id="email" autocomplete="off" name="email" placeholder="Email">
+                <input type="number" step="any" id="phone" autocomplete="off" minlength="9" name="phone" placeholder="Phone number">
+                <textarea id="message" name="message" placeholder="Write your message ..."></textarea>
+                <button type="submit" value="Submit">Send message</button>
+            </form>
         </div>
     </section>
 

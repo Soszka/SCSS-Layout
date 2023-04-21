@@ -11,7 +11,7 @@
     position: relative;
     height: 125px;
     border-radius: 0%;
-    box-shadow: 0 0 10px $text-color;
+    box-shadow: 0 0 20px rgb(207, 0, 0);
     font-size: $content-size * 1.75;
     @include extra-large-screens {
       font-size: $content-size * 1.4;
