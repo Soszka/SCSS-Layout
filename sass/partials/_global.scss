@@ -56,6 +56,6 @@ body {
   @include section-header;
   @include large-screens {
     font-size: $content-description-size * 0.75;
-    margin: 6px 0 20px 0;
+    margin: 6px 0 35px 0;
   } 
 }

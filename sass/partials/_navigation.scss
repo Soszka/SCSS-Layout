@@ -13,7 +13,7 @@
 
   a {
     @include links;
-    font-size: $content-size * 1.18;
+    font-size: $content-size * 1.16;
     font-family: $header-font;
     @include small-screens {
       font-size: $content-size;

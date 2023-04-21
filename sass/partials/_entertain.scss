@@ -43,7 +43,7 @@
 
     i {
       margin-left: 10px;
-      color: rgb(210, 210, 210);
+      color: $text-color;
       @include mega-large-screens {
         display: none;
       }
