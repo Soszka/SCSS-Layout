@@ -24,12 +24,15 @@
       @include large-screens {
         margin: 20px 10px;
       }
+    }
 
-      img {
-        @include border(15%, 15px);
-        height: 170px;
-        width: 90%;
-        object-fit: cover;
+    img {
+      @include border(15%, 15px);
+      height: 170px;
+      width: 90%;
+      object-fit: cover;
+      @include small-screens {
+        border-radius: 5%;
       }
     }
   }

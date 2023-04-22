@@ -85,7 +85,15 @@
       object-fit: cover;
       @include extra-large-screens {
         height: 300px;
-        width: 100%;   
+        width: 600px;  
+      }
+      @include medium-screens {
+        height: 200px;
+        width: 400px;  
+      }
+      @include small-screens {
+        height: 170px;
+        width: 250px;  
       }
     }
   }

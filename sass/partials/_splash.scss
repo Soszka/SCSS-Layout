@@ -41,6 +41,7 @@
 
   &__form {
     position: relative;
+    float: left;
     margin: 40px 20px;
     background: linear-gradient(to right, $text-secondary-color, $links-color);
     border: 2px solid  $links-color;
@@ -56,11 +57,13 @@
     @include large-screens {
       width: 250px;
       height: 125px;
+      box-shadow: 0px 0px 15px $links-color;
     }
     @include medium-screens {
       width: 140px;
       height: 70px;
       margin: 20px auto;
+      box-shadow: 0px 0px 8px $links-color;
     }
   }
 
@@ -146,7 +149,6 @@
     align-items: center;
     justify-content: center;
     font-size: $content-size * 2.5;
-    color: $text-color;
     margin: 40px 20px;
     width: 350px;
     height: 175px;
@@ -164,7 +166,6 @@
       font-size: $content-size;
       width: 140px;
       height: 70px;
-      float: none;
       margin: 20px auto;
     }
   } 

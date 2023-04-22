@@ -47,6 +47,9 @@
 @mixin border ($radius, $shadow) {
   border-radius: $radius;
   box-shadow: 0px 0px $shadow $text-color;
+  @include large-screens {
+    box-shadow: 0px 0px $shadow / 2 $text-color;
+  }
 }
 
 @mixin button ($color-one, $color-two) {
@@ -64,6 +67,12 @@
   &:hover {
     box-shadow: 0px 0px 50px $color-one;
     border: 3px solid $color-two;
+    @include large-screens {
+      box-shadow: 0px 0px 35px $color-one;
+    }
+    @include medium-screens {
+      box-shadow: 0px 0px 20px $color-one;
+    }
   }
 }
 
