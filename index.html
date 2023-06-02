@@ -122,40 +122,7 @@
             <h1 class="section__title">Monuments</h1>
             <h3 class="section__description">If you are interested in history, you must see these places</h3>
             <div class="monuments__list">
-                <div class="row">
-                    <div class="monuments__item col-12 col-md-6 col-xl-3">
-                        <img alt="" src="https://i.postimg.cc/KjfC3pJ8/Monuments-Foto-1.jpg" class="monuments__item__image">
-                        <h2 class="monuments__item__name">Pomnik</h2>
-                        <p class="monuments__item__description">Structure or sculpture,
-                            usually made of durable materials.
-                        </p>
-                        <a href="https://github.com/Soszka/SCSS-cityLayout" class="monuments__item__button d-none d-md-block">View More</a>
-                    </div>
-                    <div class="monuments__item col-12 col-md-6 col-xl-3">
-                        <img alt="" src="https://i.postimg.cc/gkMfY5xM/Monuments-Foto-3.jpg" class="monuments__item__image">
-                        <h2 class="monuments__item__name">Katedra</h2>
-                        <p class="monuments__item__description">Higher Church,
-                            which is usually the seat of a bishop or archbishop.
-                        </p>
-                        <a href="https://github.com/Soszka/SCSS-cityLayout" class="monuments__item__button d-none d-md-block">View More</a>
-                    </div>
-                    <div class="monuments__item col-12 col-md-6 col-xl-3">
-                        <img alt="" src="https://i.postimg.cc/v8tJKDbw/Monuments-Foto-4.jpg" class="monuments__item__image">
-                        <h2 class="monuments__item__name">Zamek</h2>
-                        <p class="monuments__item__description">Defensive structure,
-                            which had defensive and residential functions.
-                        </p>
-                        <a href="https://github.com/Soszka/SCSS-cityLayout" class="monuments__item__button d-none d-md-block">View More</a>
-                    </div>
-                    <div class="monuments__item col-md-6 col-xl-3">
-                        <img alt="" src="https://i.postimg.cc/15Rk1P3n/Monuments-Foto-2.jpg" class="monuments__item__image">
-                        <h2 class="monuments__item__name">Ratusz</h2>
-                        <p class="monuments__item__description">The building where it is located
-                            municipal authorities.
-                        </p>
-                        <a href="https://github.com/Soszka/SCSS-cityLayout" class="monuments__item__button d-none d-md-block">View More</a>
-                    </div>
-                </div>
+                <div class="row"></div>
             </div>
         </div>
     </section>
@@ -337,8 +304,20 @@
         </div>
     </footer>
 
+    <script id="template-monument-item" type="text/x-handlebars-template">
+        {{#each monuments}}
+            <div class="monuments__item col-12 col-md-6 col-xl-3">
+                <img alt="" src="{{this.img}}" class="monuments__item__image">
+                <h2 class="monuments__item__name">{{this.name}}</h2>
+                <p class="monuments__item__description">{{this.description}}</p>
+                <a href="{{link}}" class="monuments__item__button d-none d-md-block">View More</a>
+            </div>
+        {{/each}}
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <script src="js/functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 
 </html>
