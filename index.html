@@ -116,28 +116,9 @@
             <h3 class="section__description">I am convinced that in our city you will not complain about boredom</h3>
             <div class="row">
                 <div class="col-12 col-lg-4 entertain__list">
-                    <ul>
-                        <li><a href="#">Swimming <i class="fa-solid fa-person-swimming"></i></a></li>
-                        <li><a href="#">Party <i class="fa-solid fa-champagne-glasses"></i></a></li>
-                        <li><a href="#">Boating <i class="fa-solid fa-anchor"></i></a></li>
-                        <li><a href="#">Skatepark <i class="fa-solid fa-person-skating"></i></a></li>
-                        <li><a href="#">Bowling <i class="fa-solid fa-bowling-ball"></i></a></li>
-                        <li><a href="#">Cinema <i class="fa-solid fa-film"></i></a></li>
-                    </ul>
+                    <ul></ul>
                 </div>
-                <div class="col-12 col-lg-8">
-                    <div class="entertain__item">
-                        <div class="entertain__item__image">
-                            <img src="https://i.postimg.cc/jS2Z2G0Q/Entertain-Foto-2.jpg" alt="">
-                        </div>
-                        <div class="entertain__item__description">
-                            <p>If you like swimming, you will surely find something for yourself in Rzeszów.
-                               Many indoor pools as well as those open in the summer are at your full disposal.
-                               There are also clubs and swimming schools that offer training for both beginners and more advanced swimmers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-12 col-lg-8 entertain__items"></div>
             </div>
         </div>
     </section>
@@ -303,6 +284,25 @@
             <div class="carousel-item">
                 <img src="{{image}}" class="d-block w-100" alt="{{name}}">
                 <h3>" {{name}} "</h3>
+            </div>
+        {{/each}}
+    </script>
+    
+    <script id="template-entertain-link"  type="text/x-handlebars-template">
+        {{#each entertainItems}}
+            <li><a href="#{{id}}">{{id}}<i class="{{icon}}"></i></a></li>
+        {{/each}}
+    </script>
+    
+    <script id="template-entertain-item"  type="text/x-handlebars-template">
+        {{#each entertainItems}}
+            <div id="{{id}}" class="entertain__item">
+                <div class="entertain__item__image">
+                    <img src="{{image}}" alt="{{id}}">
+                </div>
+                <div class="entertain__item__description">
+                    <p>{{description}}</p>
+                </div>
             </div>
         {{/each}}
     </script>

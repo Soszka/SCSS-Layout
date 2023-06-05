@@ -31,6 +31,11 @@
       margin: 10px 0;
       padding: 15px 20px;
       width: 70%;
+      &.active {
+        background: linear-gradient(to bottom right, rgb(0, 102, 218), rgb(0, 12, 26));
+        border: 3px solid rgb(0, 102, 218);
+        box-shadow: 0px 0px 40px rgb(0, 102, 218);
+      }
       @include large-screens {
         width: 85%;
         font-size: $content-size * 1.25;
@@ -57,6 +62,11 @@
     border: 2px solid $text-color;
     height: 625px;
     overflow: hidden;
+    display: none;
+    transition: all 2s;
+    &.active {
+      display: block;
+    }
     @include large-screens {
       width: 80%;
       margin: 30px auto 0;
