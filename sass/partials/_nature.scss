@@ -7,7 +7,7 @@
       font-size: $content-description-size;
     }
 
-    &:active {
+    &.active {
       color: rgb(255, 251, 0);
     }
   }
@@ -21,8 +21,13 @@
       flex: 33%;
       margin: 20px auto;
       text-align: center;
+      filter: grayscale(100%) brightness(70%);
       @include large-screens {
         margin: 20px 10px;
+      }
+
+      &.active {
+        filter: grayscale(0%) brightness(100%);
       }
     }
 

@@ -84,19 +84,20 @@ const dataSource = {
   ],
 
   natureImages: [
-    { id : 'river', image: 'https://i.postimg.cc/brsXj8fG/Nature-Foto-1.jpg' },
-    { id : 'river', image: 'https://i.postimg.cc/ncyyN6Rz/Nature-Foto-3.jpg' },
-    { id : 'river', image: 'https://i.postimg.cc/8c32p3TZ/Nature-Foto-2.jpg' },
-    { id : 'bulverades', image: 'https://i.postimg.cc/y6b4yJ00/Nature-Foto-4.jpg' },
-    { id : 'bulverades', image: 'https://i.postimg.cc/9Fw38WBK/Nature-Foto-5.jpg' },
-    { id : 'bulverades', image: 'https://i.postimg.cc/sXgqpyXn/Nature-Foto-6.jpg' },
-    { id : 'viewPoint', image: 'https://i.postimg.cc/FRCqpqkh/Nature-Foto-7.jpg' },
-    { id : 'viewPoint', image: 'https://i.postimg.cc/ncyyN6Rz/Nature-Foto-3.jpg' },
-    { id : 'viewPoint', image: 'https://i.postimg.cc/8c32p3TZ/Nature-Foto-2.jpg' }
+    { id : 'river', image: 'https://i.postimg.cc/brsXj8fG/Nature-Foto-1.jpg', display: 'd-block' },
+    { id : 'river', image: 'https://i.postimg.cc/ncyyN6Rz/Nature-Foto-3.jpg', display: 'd-none d-md-block'},
+    { id : 'river', image: 'https://i.postimg.cc/8c32p3TZ/Nature-Foto-2.jpg', display: 'd-none d-lg-block'},
+    { id : 'bulverades', image: 'https://i.postimg.cc/y6b4yJ00/Nature-Foto-4.jpg', display: 'd-block'},
+    { id : 'bulverades', image: 'https://i.postimg.cc/9Fw38WBK/Nature-Foto-5.jpg', display: 'd-none d-md-block'},
+    { id : 'bulverades', image: 'https://i.postimg.cc/sXgqpyXn/Nature-Foto-6.jpg', display: 'd-none d-lg-block'},
+    { id : 'viewPoint', image: 'https://i.postimg.cc/FRCqpqkh/Nature-Foto-7.jpg', display: 'd-block'},
+    { id : 'viewPoint', image: 'https://i.postimg.cc/25mPSnfN/Nature-Foto-8.jpg', display: 'd-none d-md-block'},
+    { id : 'viewPoint', image: 'https://i.postimg.cc/mrwKzhbz/Nature-Foto-9.jpg', display: 'd-none d-lg-block'}
   ],
 
   educationItems: [
     {
+      id: 'flush-collapseOne',
       name: 'Politechnika mieszcząca się w Rzeszowie',
       image: 'https://i.postimg.cc/8cw2TT4s/Education-Foto-2.jpg',
       description: `A technical university that offers undergraduate, graduate,
@@ -107,6 +108,7 @@ const dataSource = {
       which enables students to gain practical experience and skills.`
     },
     {
+      id: 'flush-collapseTwo',
       name: 'Uniwersytet mieszczący się w Rzeszowie',
       image: 'https://i.postimg.cc/mrJ2GyDK/Education-Foto-1.jpg',
       description: `A comprehensive university that offers studies in various fields,
@@ -116,6 +118,7 @@ const dataSource = {
       which enable students to conduct research at a high level and develop their scientific interests.`
     },
     {
+      id: 'flush-collapseThree',
       name: 'Szkoła policealna mieszcząca się w Rzeszowie',
       image: 'https://i.postimg.cc/tgsR2yX6/Education-Foto-3.jpg',
       description: `A vocational school is a type of secondary school that offers education programs at the level of technical school or vocational courses.
