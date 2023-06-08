@@ -21,6 +21,15 @@ const template = {
   educationItem: Handlebars.compile(document.querySelector('#template-education-item').innerHTML),
 };
 
+const colors = {
+  borderGreen: 'green',
+  boxShadowGreen: '0px 0px 15px green',
+  borderBlue: 'rgb(0, 149, 255)',
+  boxShadowBlue: '0px 0px 15px rgb(0, 149, 255)',
+  borderRed: 'red',
+  boxShadowRed: '0px 0px 15px red'
+}
+
 
 // Preview
 
@@ -140,8 +149,9 @@ generateEducationItems();
 
 // Form
 
+
 function formSubmitHandler(event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
   const firstNameInput = document.getElementById("first-name");
   const lastNameInput = document.getElementById("last-name");
@@ -164,34 +174,35 @@ function formSubmitHandler(event) {
     }
     return false;
   }
-  
+
   function validatePhone(value) {
     const numericValue = Number(value);
-    if (!isNaN(numericValue)
-    && numericValue >= 0 
-    && Number.isInteger(numericValue) 
-    && value.length === 9) {
+    if (
+      !isNaN(numericValue) &&
+      numericValue >= 0 &&
+      Number.isInteger(numericValue) &&
+      value.length === 9
+    ) {
       return true;
     } else {
       return false;
     }
   }
+
   function validateEmail(value) {
-    const atIndex = value.indexOf('@');
-    const dotIndex = value.lastIndexOf('.');
-    if (atIndex > 0 
-    && dotIndex > atIndex + 1 
-    && dotIndex < value.length - 1) {
+    const atIndex = value.indexOf("@");
+    const dotIndex = value.lastIndexOf(".");
+    if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < value.length - 1) {
       return true;
     } else {
       return false;
     }
   }
-  
+
   function isEmpty(value) {
     return value.trim() === "";
   }
-  
+
   function isFieldValid(value) {
     return value.trim() !== "";
   }
@@ -203,66 +214,66 @@ function formSubmitHandler(event) {
   const isMessageEmpty = isEmpty(messageValue);
 
   if (isFirstNameNumeric) {
-    firstNameInput.style.borderColor = "red";
-    firstNameInput.style.boxShadow = "0px 0px 20px red";
+    firstNameInput.style.borderColor = colors.borderRed;
+    firstNameInput.style.boxShadow = colors.boxShadowRed;
     alert("Nieprawidłowe imię");
   } else {
-    firstNameInput.style.borderColor = isFieldValid(firstNameValue) ? "green" : "rgb(0, 149, 255)";
-    firstNameInput.style.boxShadow = isFieldValid(firstNameValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+    firstNameInput.style.borderColor = isFieldValid(firstNameValue) ? colors.borderGreen : colors.borderBlue;
+    firstNameInput.style.boxShadow = isFieldValid(firstNameValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
   }
 
   if (isLastNameNumeric) {
-    lastNameInput.style.borderColor = "red";
-    lastNameInput.style.boxShadow = "0px 0px 20px red";
+    lastNameInput.style.borderColor = colors.borderRed;
+    lastNameInput.style.boxShadow = colors.boxShadowRed;
     alert("Nieprawidłowe nazwisko");
   } else {
-    lastNameInput.style.borderColor = isFieldValid(lastNameValue) ? "green" : "rgb(0, 149, 255)";
-    lastNameInput.style.boxShadow = isFieldValid(lastNameValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+    lastNameInput.style.borderColor = isFieldValid(lastNameValue) ? colors.borderGreen : colors.borderBlue;
+    lastNameInput.style.boxShadow = isFieldValid(lastNameValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
   }
 
   if (!isPhoneValid) {
-    phoneInput.style.borderColor = "red";
-    phoneInput.style.boxShadow = "0px 0px 20px red";
+    phoneInput.style.borderColor = colors.borderRed;
+    phoneInput.style.boxShadow = colors.boxShadowRed;
     alert("Nieprawidłowy numer telefonu");
   } else {
-    phoneInput.style.borderColor = isFieldValid(phoneValue) ? "green" : "rgb(0, 149, 255)";
-    phoneInput.style.boxShadow = isFieldValid(phoneValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+    phoneInput.style.borderColor = isFieldValid(phoneValue) ? colors.borderGreen : colors.borderBlue;
+    phoneInput.style.boxShadow = isFieldValid(phoneValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
   }
 
   if (!isEmailValid) {
-    emailInput.style.borderColor = "red";
-    emailInput.style.boxShadow = "0px 0px 20px red";
+    emailInput.style.borderColor = colors.borderRed;
+    emailInput.style.boxShadow = colors.boxShadowRed;
     alert("Nieprawidłowy adres email");
   } else {
-    emailInput.style.borderColor = isFieldValid(emailValue) ? "green" : "rgb(0, 149, 255)";
-    emailInput.style.boxShadow = isFieldValid(emailValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+    emailInput.style.borderColor = isFieldValid(emailValue) ? colors.borderGreen : colors.borderBlue;
+    emailInput.style.boxShadow = isFieldValid(emailValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
   }
 
   if (isMessageEmpty) {
-    messageInput.style.borderColor = "red";
-    messageInput.style.boxShadow = "0px 0px 20px red";
+    messageInput.style.borderColor = colors.borderRed;
+    messageInput.style.boxShadow = colors.boxShadowRed;
     alert("Wiadomość jest wymagana");
   } else {
-    messageInput.style.borderColor = isFieldValid(messageValue) ? "green" : "rgb(0, 149, 255)";
-    messageInput.style.boxShadow = isFieldValid(messageValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+    messageInput.style.borderColor = isFieldValid(messageValue) ? colors.borderGreen : colors.borderBlue;
+    messageInput.style.boxShadow = isFieldValid(messageValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
   }
 
-  if ( !isFirstNameNumeric 
+  if (!isFirstNameNumeric 
     && !isLastNameNumeric 
     && isPhoneValid 
     && isEmailValid 
     && !isMessageEmpty) {
     successMessage.style.display = "block";
-    firstNameInput.style.borderColor = "rgb(0, 149, 255)";
-    firstNameInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
-    lastNameInput.style.borderColor = "rgb(0, 149, 255)";
-    lastNameInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
-    emailInput.style.borderColor = "rgb(0, 149, 255)";
-    emailInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
-    phoneInput.style.borderColor = "rgb(0, 149, 255)";
-    phoneInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
-    messageInput.style.borderColor = "rgb(0, 149, 255)";
-    messageInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
+    firstNameInput.style.borderColor = colors.borderBlue;
+    firstNameInput.style.boxShadow = colors.boxShadowBlue;
+    lastNameInput.style.borderColor = colors.borderBlue;
+    lastNameInput.style.boxShadow = colors.boxShadowBlue;
+    emailInput.style.borderColor = colors.borderBlue;
+    emailInput.style.boxShadow = colors.boxShadowBlue;
+    phoneInput.style.borderColor = colors.borderBlue;
+    phoneInput.style.boxShadow = colors.boxShadowBlue;
+    messageInput.style.borderColor = colors.borderBlue;
+    messageInput.style.boxShadow = colors.boxShadowBlue;
     firstNameInput.value = "";
     lastNameInput.value = "";
     emailInput.value = "";
@@ -271,7 +282,7 @@ function formSubmitHandler(event) {
   } else {
     successMessage.style.display = "none";
   }
-};
+}
 
 
 function addEventListenerToForm() {
