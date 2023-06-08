@@ -98,4 +98,12 @@
       }
     }
   }
+
+  .form__message {
+    font-size: $content-size * 1.5;
+    display: none;
+    @include medium-screens {
+      font-size: $content-size * 1;
+    }
+  }
 }

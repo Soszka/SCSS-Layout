@@ -125,6 +125,8 @@ function addClickListenersToNatureLinks() {
 }
 addClickListenersToNatureLinks();
 
+
+
 // Education
 
 function generateEducationItems() {
@@ -134,19 +136,146 @@ function generateEducationItems() {
 }
 generateEducationItems();
 
-function zmienFlushColapseOne() {
-  var drugiElement = document.querySelector('#flush-collapseOne');
-  var trzeciElement = document.querySelector('#flush-collapseOne');
-  var drugiButton = document.querySelector('#flush-collapseOne button');
-  var trzeciButton = document.querySelector('#flush-collapseOne button');
 
-  drugiElement.setAttribute('data-bs-target', '#flush-collapseTwo');
-  trzeciElement.setAttribute('data-bs-target', '#flush-collapseThree');
-  drugiElement.setAttribute('aria-controls', 'flush-collapseTwo');
-  trzeciElement.setAttribute('aria-controls', 'flush-collapseThree');
-  drugiButton.setAttribute('data-bs-target', '#flush-collapseTwo');
-  trzeciButton.setAttribute('data-bs-target', '#flush-collapseThree');
-  drugiButton.setAttribute('aria-controls', 'flush-collapseTwo');
-  trzeciButton.setAttribute('aria-controls', 'flush-collapseThree');
+
+// Form
+
+function formSubmitHandler(event) {
+  event.preventDefault(); 
+
+  const firstNameInput = document.getElementById("first-name");
+  const lastNameInput = document.getElementById("last-name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const messageInput = document.getElementById("message");
+  const successMessage = document.querySelector(".form__message");
+
+  const firstNameValue = firstNameInput.value;
+  const lastNameValue = lastNameInput.value;
+  const emailValue = emailInput.value;
+  const phoneValue = phoneInput.value;
+  const messageValue = messageInput.value;
+
+  function hasNumericValue(value) {
+    for (let i = 0; i < value.length; i++) {
+      if (!isNaN(Number(value[i]))) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  function validatePhone(value) {
+    const numericValue = Number(value);
+    if (!isNaN(numericValue)
+    && numericValue >= 0 
+    && Number.isInteger(numericValue) 
+    && value.length === 9) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  function validateEmail(value) {
+    const atIndex = value.indexOf('@');
+    const dotIndex = value.lastIndexOf('.');
+    if (atIndex > 0 
+    && dotIndex > atIndex + 1 
+    && dotIndex < value.length - 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  function isEmpty(value) {
+    return value.trim() === "";
+  }
+  
+  function isFieldValid(value) {
+    return value.trim() !== "";
+  }
+
+  const isFirstNameNumeric = hasNumericValue(firstNameValue);
+  const isLastNameNumeric = hasNumericValue(lastNameValue);
+  const isPhoneValid = validatePhone(phoneValue);
+  const isEmailValid = validateEmail(emailValue);
+  const isMessageEmpty = isEmpty(messageValue);
+
+  if (isFirstNameNumeric) {
+    firstNameInput.style.borderColor = "red";
+    firstNameInput.style.boxShadow = "0px 0px 20px red";
+    alert("Nieprawidłowe imię");
+  } else {
+    firstNameInput.style.borderColor = isFieldValid(firstNameValue) ? "green" : "rgb(0, 149, 255)";
+    firstNameInput.style.boxShadow = isFieldValid(firstNameValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+  }
+
+  if (isLastNameNumeric) {
+    lastNameInput.style.borderColor = "red";
+    lastNameInput.style.boxShadow = "0px 0px 20px red";
+    alert("Nieprawidłowe nazwisko");
+  } else {
+    lastNameInput.style.borderColor = isFieldValid(lastNameValue) ? "green" : "rgb(0, 149, 255)";
+    lastNameInput.style.boxShadow = isFieldValid(lastNameValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+  }
+
+  if (!isPhoneValid) {
+    phoneInput.style.borderColor = "red";
+    phoneInput.style.boxShadow = "0px 0px 20px red";
+    alert("Nieprawidłowy numer telefonu");
+  } else {
+    phoneInput.style.borderColor = isFieldValid(phoneValue) ? "green" : "rgb(0, 149, 255)";
+    phoneInput.style.boxShadow = isFieldValid(phoneValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+  }
+
+  if (!isEmailValid) {
+    emailInput.style.borderColor = "red";
+    emailInput.style.boxShadow = "0px 0px 20px red";
+    alert("Nieprawidłowy adres email");
+  } else {
+    emailInput.style.borderColor = isFieldValid(emailValue) ? "green" : "rgb(0, 149, 255)";
+    emailInput.style.boxShadow = isFieldValid(emailValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+  }
+
+  if (isMessageEmpty) {
+    messageInput.style.borderColor = "red";
+    messageInput.style.boxShadow = "0px 0px 20px red";
+    alert("Wiadomość jest wymagana");
+  } else {
+    messageInput.style.borderColor = isFieldValid(messageValue) ? "green" : "rgb(0, 149, 255)";
+    messageInput.style.boxShadow = isFieldValid(messageValue) ? "0px 0px 15px green" : "0px 0px 10px rgb(0, 149, 255)";
+  }
+
+  if ( !isFirstNameNumeric 
+    && !isLastNameNumeric 
+    && isPhoneValid 
+    && isEmailValid 
+    && !isMessageEmpty) {
+    successMessage.style.display = "block";
+    firstNameInput.style.borderColor = "rgb(0, 149, 255)";
+    firstNameInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
+    lastNameInput.style.borderColor = "rgb(0, 149, 255)";
+    lastNameInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
+    emailInput.style.borderColor = "rgb(0, 149, 255)";
+    emailInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
+    phoneInput.style.borderColor = "rgb(0, 149, 255)";
+    phoneInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
+    messageInput.style.borderColor = "rgb(0, 149, 255)";
+    messageInput.style.boxShadow = "0px 0px 10px rgb(0, 149, 255)";
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    emailInput.value = "";
+    phoneInput.value = "";
+    messageInput.value = "";
+  } else {
+    successMessage.style.display = "none";
+  }
+};
+
+
+function addEventListenerToForm() {
+  const formContainer = document.querySelector('form');
+  formContainer.addEventListener('submit', formSubmitHandler);
 }
-zmienFlushColapseOne()
+addEventListenerToForm()
