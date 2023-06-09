@@ -9,7 +9,11 @@ const select = {
   entertainLinksListSelector: '.entertain__list ul',
   entertainItemsListSelector: '.entertain__items',
   natureItemsListSelector: '.nature__gallery',
-  educationItemsListSelector: '.education .accordion'
+  educationItemsListSelector: '.education .accordion',
+  styleLightLink: document.querySelector('link[href="css/styleLight.css"]'),
+  styleDarkLink: document.querySelector('link[href="css/styleDark.css"]'),
+  darkLabel: document.querySelector('label[for="dark"]'),
+  lightLabel: document.querySelector('label[for="light"]')
 }
 
 const template = {
@@ -216,7 +220,7 @@ function formSubmitHandler(event) {
   if (isFirstNameNumeric) {
     firstNameInput.style.borderColor = colors.borderRed;
     firstNameInput.style.boxShadow = colors.boxShadowRed;
-    alert("Nieprawidłowe imię");
+    alert("Wrong First Name");
   } else {
     firstNameInput.style.borderColor = isFieldValid(firstNameValue) ? colors.borderGreen : colors.borderBlue;
     firstNameInput.style.boxShadow = isFieldValid(firstNameValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
@@ -225,7 +229,7 @@ function formSubmitHandler(event) {
   if (isLastNameNumeric) {
     lastNameInput.style.borderColor = colors.borderRed;
     lastNameInput.style.boxShadow = colors.boxShadowRed;
-    alert("Nieprawidłowe nazwisko");
+    alert("Wrong Last Name");
   } else {
     lastNameInput.style.borderColor = isFieldValid(lastNameValue) ? colors.borderGreen : colors.borderBlue;
     lastNameInput.style.boxShadow = isFieldValid(lastNameValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
@@ -234,7 +238,7 @@ function formSubmitHandler(event) {
   if (!isPhoneValid) {
     phoneInput.style.borderColor = colors.borderRed;
     phoneInput.style.boxShadow = colors.boxShadowRed;
-    alert("Nieprawidłowy numer telefonu");
+    alert("Wrong phone number");
   } else {
     phoneInput.style.borderColor = isFieldValid(phoneValue) ? colors.borderGreen : colors.borderBlue;
     phoneInput.style.boxShadow = isFieldValid(phoneValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
@@ -243,7 +247,7 @@ function formSubmitHandler(event) {
   if (!isEmailValid) {
     emailInput.style.borderColor = colors.borderRed;
     emailInput.style.boxShadow = colors.boxShadowRed;
-    alert("Nieprawidłowy adres email");
+    alert("Wrong email");
   } else {
     emailInput.style.borderColor = isFieldValid(emailValue) ? colors.borderGreen : colors.borderBlue;
     emailInput.style.boxShadow = isFieldValid(emailValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
@@ -252,7 +256,7 @@ function formSubmitHandler(event) {
   if (isMessageEmpty) {
     messageInput.style.borderColor = colors.borderRed;
     messageInput.style.boxShadow = colors.boxShadowRed;
-    alert("Wiadomość jest wymagana");
+    alert("message is neccesary");
   } else {
     messageInput.style.borderColor = isFieldValid(messageValue) ? colors.borderGreen : colors.borderBlue;
     messageInput.style.boxShadow = isFieldValid(messageValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
@@ -290,3 +294,16 @@ function addEventListenerToForm() {
   formContainer.addEventListener('submit', formSubmitHandler);
 }
 addEventListenerToForm()
+
+
+// Splash Form
+
+select.darkLabel.addEventListener('click', function() {
+  select.styleLightLink.disabled = true;
+  select.styleDarkLink.disabled = false;
+});
+
+select.lightLabel.addEventListener('click', function() {
+  select.styleLightLink.disabled = false;
+  select.styleDarkLink.disabled = true;
+});
