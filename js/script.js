@@ -1,38 +1,18 @@
 import { dataSource } from './data.js';
+import { select, template, colors } from './settings.js';
 
 
-// Settings
+// Splash Form
 
-const select = {
-  monumentsListSelector: '.monuments__list .row',
-  previewItemsListSelector: '.preview__carousel .carousel-inner',
-  entertainLinksListSelector: '.entertain__list ul',
-  entertainItemsListSelector: '.entertain__items',
-  natureItemsListSelector: '.nature__gallery',
-  educationItemsListSelector: '.education .accordion',
-  styleLightLink: document.querySelector('link[href="css/styleLight.css"]'),
-  styleDarkLink: document.querySelector('link[href="css/styleDark.css"]'),
-  darkLabel: document.querySelector('label[for="dark"]'),
-  lightLabel: document.querySelector('label[for="light"]')
-}
+select.darkLabel.addEventListener('click', function() {
+  select.styleLightLink.disabled = true;
+  select.styleDarkLink.disabled = false;
+});
 
-const template = {
-  monumentsItem: Handlebars.compile(document.querySelector('#template-monument-item').innerHTML),
-  previewCarouselItem: Handlebars.compile(document.querySelector('#template-preview-carousel-item').innerHTML),
-  entertainLink: Handlebars.compile(document.querySelector('#template-entertain-link').innerHTML),
-  entertainItem: Handlebars.compile(document.querySelector('#template-entertain-item').innerHTML),
-  natureItem: Handlebars.compile(document.querySelector('#template-nature-item').innerHTML),
-  educationItem: Handlebars.compile(document.querySelector('#template-education-item').innerHTML),
-};
-
-const colors = {
-  borderGreen: 'green',
-  boxShadowGreen: '0px 0px 15px green',
-  borderBlue: 'rgb(0, 149, 255)',
-  boxShadowBlue: '0px 0px 15px rgb(0, 149, 255)',
-  borderRed: 'red',
-  boxShadowRed: '0px 0px 15px red'
-}
+select.lightLabel.addEventListener('click', function() {
+  select.styleLightLink.disabled = false;
+  select.styleDarkLink.disabled = true;
+});
 
 
 // Preview
@@ -68,7 +48,6 @@ function generateEntertainLinks() {
 }
 generateEntertainLinks()
 
-
 function generateEntertainItems() {
   const entertainItemsList = document.querySelector(select.entertainItemsListSelector);
   const entertainItemHTML = template.entertainItem(dataSource);
@@ -77,7 +56,6 @@ function generateEntertainItems() {
   firstEntertainItem.classList.add('active');
 }
 generateEntertainItems()
-
 
 function entertainClickHandler(event) {
   event.preventDefault();
@@ -139,7 +117,6 @@ function addClickListenersToNatureLinks() {
 addClickListenersToNatureLinks();
 
 
-
 // Education
 
 function generateEducationItems() {
@@ -150,9 +127,7 @@ function generateEducationItems() {
 generateEducationItems();
 
 
-
 // Form
-
 
 function formSubmitHandler(event) {
   event.preventDefault();
@@ -177,7 +152,7 @@ function formSubmitHandler(event) {
       }
     }
     return false;
-  }
+  };
 
   function validatePhone(value) {
     const numericValue = Number(value);
@@ -191,7 +166,7 @@ function formSubmitHandler(event) {
     } else {
       return false;
     }
-  }
+  };
 
   function validateEmail(value) {
     const atIndex = value.indexOf("@");
@@ -201,15 +176,15 @@ function formSubmitHandler(event) {
     } else {
       return false;
     }
-  }
+  };
 
   function isEmpty(value) {
     return value.trim() === "";
-  }
+  };
 
   function isFieldValid(value) {
     return value.trim() !== "";
-  }
+  };
 
   const isFirstNameNumeric = hasNumericValue(firstNameValue);
   const isLastNameNumeric = hasNumericValue(lastNameValue);
@@ -224,7 +199,7 @@ function formSubmitHandler(event) {
   } else {
     firstNameInput.style.borderColor = isFieldValid(firstNameValue) ? colors.borderGreen : colors.borderBlue;
     firstNameInput.style.boxShadow = isFieldValid(firstNameValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
-  }
+  };
 
   if (isLastNameNumeric) {
     lastNameInput.style.borderColor = colors.borderRed;
@@ -233,7 +208,7 @@ function formSubmitHandler(event) {
   } else {
     lastNameInput.style.borderColor = isFieldValid(lastNameValue) ? colors.borderGreen : colors.borderBlue;
     lastNameInput.style.boxShadow = isFieldValid(lastNameValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
-  }
+  };
 
   if (!isPhoneValid) {
     phoneInput.style.borderColor = colors.borderRed;
@@ -242,7 +217,7 @@ function formSubmitHandler(event) {
   } else {
     phoneInput.style.borderColor = isFieldValid(phoneValue) ? colors.borderGreen : colors.borderBlue;
     phoneInput.style.boxShadow = isFieldValid(phoneValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
-  }
+  };
 
   if (!isEmailValid) {
     emailInput.style.borderColor = colors.borderRed;
@@ -251,16 +226,16 @@ function formSubmitHandler(event) {
   } else {
     emailInput.style.borderColor = isFieldValid(emailValue) ? colors.borderGreen : colors.borderBlue;
     emailInput.style.boxShadow = isFieldValid(emailValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
-  }
+  };
 
   if (isMessageEmpty) {
     messageInput.style.borderColor = colors.borderRed;
     messageInput.style.boxShadow = colors.boxShadowRed;
-    alert("message is neccesary");
+    alert("Message is necessary");
   } else {
     messageInput.style.borderColor = isFieldValid(messageValue) ? colors.borderGreen : colors.borderBlue;
     messageInput.style.boxShadow = isFieldValid(messageValue) ? colors.boxShadowGreen : colors.boxShadowBlue;
-  }
+  };
 
   if (!isFirstNameNumeric 
     && !isLastNameNumeric 
@@ -286,14 +261,13 @@ function formSubmitHandler(event) {
   } else {
     successMessage.style.display = "none";
   }
-}
-
+};
 
 function addEventListenerToForm() {
   const formContainer = document.querySelector('form');
   formContainer.addEventListener('submit', formSubmitHandler);
-}
-addEventListenerToForm()
+};
+addEventListenerToForm();
 
 
 // Splash Form

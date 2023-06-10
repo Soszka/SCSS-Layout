@@ -67,7 +67,7 @@ const dataSource = {
     },
     {
       id: 'bowling',
-      icon: "fa-solid fa-bowling-bal",
+      icon: "fa-solid fa-bowling-ball",
       image: 'https://i.postimg.cc/DZg9FwHt/Entertain-Foto-4.jpg',
       description: `Looking for indoor fun? Rzeszów has you covered with its fantastic bowling alleys.
        Rzeszów's bowling centers offer multiple lanes, comfortable seating, and a lively atmosphere.
