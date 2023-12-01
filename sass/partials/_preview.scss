@@ -1,4 +1,14 @@
 .preview {
+
+  .column {
+    @include small-screens {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
   &__content {
     display: flex;
     justify-content: center;
@@ -7,7 +17,8 @@
     font-size: $content-size * 1.25;
     font-weight: 600;
     @include medium-screens {
-      font-size: $content-size;
+      font-size: $content-size * 1.1;
+      text-align: center;
     }
 
     a {
@@ -22,6 +33,12 @@
     margin: 20px;
     @include extra-large-screens {
       display: none;
+    }
+    @include small-screens {
+      display: inline-block;
+      width: 80%;
+      text-align: center;
+      padding: 20px;
     }
   }
 
@@ -38,8 +55,7 @@
         height: 320px;
       }
       @include small-screens {
-        width: 350px;
-        height: 225px;
+        display: none;
       }
     }
 

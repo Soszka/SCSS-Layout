@@ -25,6 +25,9 @@
       @include large-screens {
         margin: 20px 10px;
       }
+      @include medium-screens {
+        flex: 90%;
+      }
 
       &.active {
         filter: grayscale(0%) brightness(100%);

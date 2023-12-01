@@ -93,8 +93,8 @@
         font-size: $content-size * 1.5;
       }
       @include small-screens {
-        width: 220px;
-        font-size: $content-size * 1;
+        width: 80%;
+        padding: 15px;
       }
     }
   }

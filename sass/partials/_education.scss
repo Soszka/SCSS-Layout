@@ -14,10 +14,10 @@
     box-shadow: 0 0 20px rgb(207, 0, 0);
     font-size: $content-size * 1.75;
     @include extra-large-screens {
-      font-size: $content-size * 1.4;
+      font-size: $content-size * 1.5;
     }
     @include medium-screens {
-      font-size: $content-size;
+      font-size: $content-size * 1.2;
     }
 
     &::after {
@@ -61,11 +61,11 @@
       font-size: $content-size * 1.25;
       padding: 40px 20px;
       @include extra-large-screens {
-        font-size: $content-size;
+        font-size: $content-size 1.15;
         padding: 20px 10px;
       }
       @include medium-screens {
-        font-size: $content-size * 0.8;
+        font-size: $content-size * 1;
         padding: 10px 5px;
       }
     }
@@ -74,7 +74,7 @@
       flex: 1;
       padding: 20px;
       @include extra-large-screens {
-        padding-top: 0px;
+        display: none;
       }
     }
 
@@ -83,18 +83,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      @include extra-large-screens {
-        height: 300px;
-        width: 600px;  
-      }
-      @include medium-screens {
-        height: 200px;
-        width: 400px;  
-      }
-      @include small-screens {
-        height: 170px;
-        width: 250px;  
-      }
     }
   }
 }

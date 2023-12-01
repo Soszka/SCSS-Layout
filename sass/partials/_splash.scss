@@ -19,11 +19,8 @@
     font-size: $content-title-size * 1.5;
     font-family: $header-font;
     font-weight: $font-weight-bold;
-    @include extra-large-screens {
-      font-size: $content-title-size;
-    }
-    @include medium-screens {
-      font-size: $content-title-size * 0.7;
+    @include large-screens {
+      font-size: $content-title-size * 1;
     }
   }
 
@@ -31,11 +28,11 @@
     font-size: $content-description-size * 1.5;
     font-family: $header-font;
     font-weight: $font-weight-bold;
-    @include extra-large-screens {
-      font-size: $content-description-size;
+    @include large-screens {
+      font-size: $content-description-size * 1.25;
     }
-    @include medium-screens {
-      font-size: $content-description-size * 0.75;
+    @include small-screens {
+      display: none;
     }
   }
 
@@ -50,23 +47,16 @@
     width: 350px;
     height: 175px;
     transition: all 1s;
-    @include extra-large-screens {
-      width: 300px;
+    @include large-screens {
+      box-shadow: 0px 0px 15px $links-color;
+      float: none;
+      margin: 40px auto 5px;
+    }
+    @include small-screens {
+      width: 275px;
       height: 150px;
     }
-    @include large-screens {
-      width: 250px;
-      height: 125px;
-      box-shadow: 0px 0px 15px $links-color;
-    }
-    @include medium-screens {
-      width: 140px;
-      height: 70px;
-      margin: 20px auto;
-      box-shadow: 0px 0px 8px $links-color;
-    }
   }
-
 
   &__form__description {
     position: absolute;
@@ -76,14 +66,8 @@
     white-space: nowrap;
     font-size: $content-size * 2;
     font-family: $header-font;
-    @include extra-large-screens {
-      font-size: $content-size * 1.75;
-    }
-    @include large-screens {
-      font-size: $content-size * 1.5;
-    }
     @include medium-screens {
-      font-size: $content-size * 0.9;
+      font-size: $content-size * 1.75;
     }
 
     p { 
@@ -93,20 +77,10 @@
     label {
       font-size: $content-size * 2;
       cursor: pointer;
-      line-height: 10px;
+      line-height: 20px;
       margin: 5px;
-      @include extra-large-screens {
-        line-height: 20px;
-        font-size: $content-size * 1.75;
-      }
-      @include large-screens {
-        line-height: 5px;
+      @include small-screens {
         font-size: $content-size * 1.5;
-      }
-      @include medium-screens {
-        line-height: 5px;
-        font-size: $content-size * 0.9;
-        margin: 0 5px;
       }
     }
 
@@ -119,13 +93,8 @@
       position: relative;
       margin: 0 auto 10px;
       @include large-screens {
-        width: 30px;
-        height: 30px;
-        border: 2px solid $text-color;
-      }
-      @include medium-screens {
-        width: 15px;
-        height: 15px;
+        width: 35px;
+        height: 35px;
       }
     }
 
@@ -144,29 +113,20 @@
 
   &__btn {
     @include button($links-color, $text-secondary-color);
-    display: flex;
-    float: right;
-    align-items: center;
-    justify-content: center;
     font-size: $content-size * 2.5;
     margin: 40px 20px;
+    float: right;
+    line-height: 60px;
     width: 350px;
     height: 175px;
-    @include extra-large-screens {
-      font-size: $content-size * 2;
-      width: 300px;
-      height: 150px;
-    }
     @include large-screens {
-      font-size: $content-size * 1.5;
-      width: 250px;
-      height: 125px;
+      float: none;
+      display: inline-block;
     }
-    @include medium-screens {
-      font-size: $content-size;
-      width: 140px;
-      height: 70px;
-      margin: 20px auto;
+    @include small-screens {
+      line-height: 50px;
+      width: 275px;
+      height: 150px;
     }
   } 
 } 
