@@ -37,7 +37,7 @@
         padding: 7px 10px;
       }
       @include small-screens {
-        font-size: $content-size * 1.1
+        font-size: $content-size * 1.1;
       }
 
       &.active {
